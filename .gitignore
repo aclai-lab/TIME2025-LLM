@@ -1,0 +1,15 @@
+.vscode/
+.venv/
+.ropeproject/
+rotation_stability_results/
+*.pyc
+.aider*
+/*.json
+/*.png
+/*.svg
+/*.pgf
+.env-openrouter
+.DS_Store
+.env
+*.pdf
+__pycache__/

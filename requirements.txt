@@ -1,0 +1,6 @@
+python-dotenv
+openai
+colorama
+pandas
+matplotlib
+seaborn
