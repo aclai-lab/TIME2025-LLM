@@ -25,7 +25,7 @@ pip install -r requirements.txt
 ```
 
 > [!IMPORTANT]  
-> Qwen3 models have a specific feature that allow enabling/disabling the reasoning CoT generation by appending `/think` / `/no_think` to the prompt. For this reason all the CoT tests for the Qwen models are commented. You will need to manually add `/think` to the prompt for these tests to be correctly executed.
+> Qwen3 models have a specific feature that allows enabling/disabling the reasoning CoT generation by appending `/think` / `/no_think` to the prompt. For this reason all the non-CoT tests for the Qwen models are commented. You will need to manually add `/no_think` to the prompt for these tests to be correctly executed. Also set `max_tokens_no_cot` to 10.
 
 4. Move the resuling JSONs to `results/data/`
 5. Plot the overall results with the command `python3 results/data`
