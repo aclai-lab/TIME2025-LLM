@@ -1,0 +1,2511 @@
+{
+  "metadata": {
+    "num_instances": 500,
+    "num_valid": 250,
+    "num_satisfiable_not_valid": 0,
+    "num_unsatisfiable": 250,
+    "seed": null
+  },
+  "formulas": [
+    {
+      "formula": "([begun_by][ended_by]!![before]r | ![contains][before]r)",
+      "size": 12,
+      "type": "valid"
+    },
+    {
+      "formula": "([begins]![finished]<overlapped_by>!![before]r | <begins>[finished]!!![overlapped_by]<before>!r)",
+      "size": 19,
+      "type": "valid"
+    },
+    {
+      "formula": "(!(![finished]<finished><begun_by>q & (<met_by>!p | ![meets]p)) | !(([finished]<overlaps>q | [met_by]p) & ([finished]<overlaps>q | [meets]p)))",
+      "size": 31,
+      "type": "valid"
+    },
+    {
+      "formula": "!((!<during><begun_by><ended_by>t -> !(!r | q)) & ((r -> q) & [begins][finished][contains]!t))",
+      "size": 20,
+      "type": "valid"
+    },
+    {
+      "formula": "!((!((!<finished><begun_by>r | s) -> s) | !t) & ((!(<overlaps>r -> s) | s) & t))",
+      "size": 23,
+      "type": "valid"
+    },
+    {
+      "formula": "([overlapped_by]!!s | <overlapped_by>!s)",
+      "size": 9,
+      "type": "valid"
+    },
+    {
+      "formula": "(!<begins><finished>!!q | <finished>![begins]!q)",
+      "size": 9,
+      "type": "valid"
+    },
+    {
+      "formula": "!([begins](<contains>![overlaps]<later>!<meets><meets>q -> (!<finished>!<begun_by>!<finished><begun_by><begins><ended_by>![contains]r & !(!(!![finished]![begun_by]<overlaps><overlapped_by><contains>!r & !r) & !r))) & ([begins]<begun_by><ended_by>(<overlaps>!![later]<later>q & <overlaps>!![later]<later>q) & <begins>(![finished]![begun_by]<finished><begun_by><begins><ended_by>![contains]r | !(!(![finished]![begun_by]<finished><begun_by><begins><ended_by>![contains]r | r) | r))))",
+      "size": 90,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets]<overlaps>!![met_by]<overlapped_by>!<begins><finished><before>!![begun_by]![later]<finished><begins><before>!![ended_by]<begins><finished><begun_by><ended_by><contains>(t -> ![meets]<overlaps>![overlaps]<overlaps>!<ended_by>!s) | <meets>[overlaps]<met_by>!![overlapped_by]<finished><begins>![before]<begun_by>!<later>!<begins><finished>![before]<ended_by>!<during><contains><begun_by><ended_by>(!t | <meets>!<finished><begun_by><overlaps>!![overlaps]![ended_by]s))",
+      "size": 80,
+      "type": "valid"
+    },
+    {
+      "formula": "((!!![during]t & r) | ([during]t | !r))",
+      "size": 16,
+      "type": "valid"
+    },
+    {
+      "formula": "(<overlaps>((s -> <overlapped_by>!![before]<before>!<overlapped_by>!![before]<meets><meets>![finished]<ended_by><begun_by>t) & [begins]t) | (<overlaps>(!![overlapped_by]<before>!![before]![overlapped_by]<before>!<later><finished>!<begun_by><ended_by>t & !!s) | [overlaps]<begins>!t))",
+      "size": 51,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets][met_by][begins][ended_by](s & (![finished]![overlapped_by](!s | <begun_by><ended_by><overlapped_by>!<during>![later]![meets]<overlaps>!t) & r)) | [meets]<met_by><overlapped_by>(!s | ([finished]<overlapped_by>!(s -> <contains>![overlapped_by]<begins><finished><later>!<meets>!![overlaps]t) | !r)))",
+      "size": 57,
+      "type": "valid"
+    },
+    {
+      "formula": "(<finished>(<ended_by>!<begun_by>!<later>!<met_by><met_by>t & [during]<before>!<finished>!<contains>!s) | (<finished>[ended_by]![begun_by]![later]<before>t | [finished]<during>[before]![finished]![contains]s))",
+      "size": 41,
+      "type": "valid"
+    },
+    {
+      "formula": "!((!![later]<later>!<begun_by>!!(s | <later>!(s | ![begun_by]![overlapped_by]!!s)) | ![contains]<later>!![later]![begun_by](!s & !<meets><meets>(!s & !<begun_by>!<overlapped_by>!s))) & (<later>!<later>!<begun_by>!!(s | <later>!(s | ![begun_by]<overlapped_by>!s)) & [contains]<later>!<later>!<begun_by>!!(s | <later>!(s | ![begun_by]<overlapped_by>!s))))",
+      "size": 85,
+      "type": "valid"
+    },
+    {
+      "formula": "((!!![during]<finished><begun_by>(<overlapped_by><met_by><met_by>q -> <during>!<begins><ended_by><before>q) | (!p -> !(!![begins]![finished]<meets><meets>q | (q & 1)))) | ([during]!!<overlaps>(!![during](<overlapped_by><met_by><met_by>q & 1) -> !<overlapped_by><met_by><met_by>q) & ((<begins>!<finished>!<later>q -> (q & q)) & !p)))",
+      "size": 65,
+      "type": "valid"
+    },
+    {
+      "formula": "((((<overlaps>r -> (!!<begins><finished><finished>!<finished>!r -> ![begins]r)) -> ![during](!<finished><begun_by>r | (!<begins>!r -> !<during>![finished]![finished]r))) & ![ended_by](!(s | t) & (<begun_by><ended_by><later><ended_by>!t | t))) | (((<overlaps>r -> (!!<during><finished>!<finished>!r -> ![begins]r)) & [during](<overlaps>r -> (!!<during><finished>!<finished>!r -> ![begins]r))) | !<ended_by>!(((!s & !t) & <ended_by><begun_by><meets><meets>![ended_by]t) | ((!s & !t) & t))))",
+      "size": 114,
+      "type": "valid"
+    },
+    {
+      "formula": "([begins][finished][during]!q | <during><begins><finished>q)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "(![meets](![finished]<during>(s -> <begun_by>!r) -> ![begins]<contains>!![before]<during>!r) | (<meets>[finished]<begins><finished>(!![begun_by]r -> !s) | !<meets>[begins]![contains]<before>!![during]r))",
+      "size": 43,
+      "type": "valid"
+    },
+    {
+      "formula": "([before]<begins><finished><begins><finished><during>!!!(<finished><begins>s & r) | <before>[finished][begins][during][begins][finished](<begins><finished>s & r))",
+      "size": 30,
+      "type": "valid"
+    },
+    {
+      "formula": "(<overlaps>!(p -> (!q | p)) | (<overlaps>!p | [overlaps](!q | p)))",
+      "size": 15,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets]!!<overlaps>!![met_by]<overlapped_by>!<finished><begins><before>!(<begins>!<finished><begins><begun_by><ended_by>(t -> q) & (s | ![begun_by]![later]<finished><begins><before>!!(t | r))) | <meets>[overlaps]<met_by>!![overlapped_by]<begins><finished>![before]((![begins]<begins><finished><ended_by><begun_by>(!t | q) & s) | (![begins]<begins><finished><ended_by><begun_by>(!t | q) & <begun_by>!<later>!<begins><finished>![before](!t & !r))))",
+      "size": 86,
+      "type": "valid"
+    },
+    {
+      "formula": "([contains][overlaps]<later>!<meets><meets>(!(!<begins>!![met_by]p & !r) & !r) | <begun_by><ended_by>(<overlaps>[later]<later>!(!(![begins]<met_by>!p | r) | r) & <overlaps>[later]<later>!(!(![begins]<met_by>!p | r) | r)))",
+      "size": 56,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets][met_by][begins][ended_by](<before>!<later>!(r | s) & [begun_by][ended_by]!t) | [meets]![met_by][overlapped_by](![before]<meets><meets>(!r & !s) & [ended_by][begun_by]!t))",
+      "size": 33,
+      "type": "valid"
+    },
+    {
+      "formula": "!(<overlaps>!<finished><begins>![begins]<ended_by>!(<contains><begins><ended_by><ended_by>!<met_by>!(!q -> !p) & (![during](p -> q) | <overlaps>!<finished><begins>![begins]<ended_by>!(p -> q))) & [overlaps]<begins><finished><begins>!![ended_by]((<begun_by><ended_by><overlapped_by>![ended_by]![met_by](p -> q) & <during>!(p -> q)) | (<begun_by><ended_by><overlapped_by>![ended_by]![met_by](p -> q) & ![overlaps]<begins><finished><begins>!![ended_by](p -> q))))",
+      "size": 86,
+      "type": "valid"
+    },
+    {
+      "formula": "(<before>(<finished><begins><begun_by>!<ended_by>!<begins>!<begun_by><ended_by>!((!!((!p | <later>!t) & t) | <later>!t) & t) & [begun_by]![ended_by]![begins]<ended_by><begun_by>(!((!(p -> ![later]t) | !t) -> ![later]t) | !t)) | (<before>[begins][finished][begun_by]![ended_by]<begins>!<begun_by><ended_by>!((!!((!p | <later>!t) & t) | <later>!t) & t) | [before]<begun_by>[ended_by]<begins>!<begun_by><ended_by>!((!!((!p | <later>!t) & t) | <later>!t) & t)))",
+      "size": 110,
+      "type": "valid"
+    },
+    {
+      "formula": "([overlapped_by]![before]<before><meets><meets>s | <overlapped_by>!<before>!<met_by><met_by><later>s)",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "((![during](!![during]q & !<finished><begun_by>r) | !!<later>!!(<during>!q | <overlaps>r)) | ([during]!(<during>!q | <overlaps>r) & [later](!(<during>!q | <overlaps>r) & !(<during>!q | <overlaps>r))))",
+      "size": 52,
+      "type": "valid"
+    },
+    {
+      "formula": "(<met_by>(![before]<before><meets><meets><meets><meets><begins><ended_by>p & !t) | (<met_by>[before]<met_by><met_by><later><later><overlapped_by>p | [met_by]t))",
+      "size": 26,
+      "type": "valid"
+    },
+    {
+      "formula": "(!<begins><finished>![during]![before]![meets]<during>s | <finished><begins><during>[before]!!<meets>!<begins><finished>s)",
+      "size": 22,
+      "type": "valid"
+    },
+    {
+      "formula": "((![before]q | ([before]q & [overlapped_by]q)) | <overlapped_by>!q)",
+      "size": 16,
+      "type": "valid"
+    },
+    {
+      "formula": "(((t & [met_by]![contains]<before>!<later>!p) | ![met_by]<contains>!![before]![later]p) | !t)",
+      "size": 25,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets]![begins]<finished><begins><ended_by><begun_by>![met_by]![overlaps]<met_by>!t | <meets>[begins]!!<begins><finished><begun_by><ended_by><met_by>!<overlaps>!![met_by]t)",
+      "size": 33,
+      "type": "valid"
+    },
+    {
+      "formula": "!(![begins]![finished]![begins]![finished]<begins><ended_by>![overlaps]!(<overlapped_by>!![before]<overlaps>!<meets><meets>(<ended_by><begun_by>t & !!<begun_by><ended_by>t) & <overlapped_by><finished><begun_by><overlapped_by>!![before]<overlaps>!<meets><meets>(<ended_by><begun_by><during>!<begins><finished>!!q & !!<begun_by><ended_by>![during]<finished><begins>(q & !!q))) & [begins]<finished>!<begins>!<finished>!<overlapped_by><overlaps>!(!![overlapped_by]<before>!![overlaps]<later>!!<ended_by><begun_by>t | !<begins><ended_by><overlaps>![overlapped_by]<before>!![overlaps]<later>!!<ended_by><begun_by><during>!<begins><finished>!!q))",
+      "size": 113,
+      "type": "valid"
+    },
+    {
+      "formula": "((r & [finished]!<begins>!(q | p)) | (<begins><finished>(!q & !p) | !r))",
+      "size": 20,
+      "type": "valid"
+    },
+    {
+      "formula": "(<overlaps>((!((p & (s | t)) & 1) | s) & [before]s) | (<overlaps>(((p & s) | (p & t)) & !s) | [overlaps]<before>!s))",
+      "size": 30,
+      "type": "valid"
+    },
+    {
+      "formula": "(<during>(![before]<before>![meets]t & (![before]<during>!![begins]<contains>!!(![contains]<finished><begins>q & ![before]<during>!![begins]<contains>!!(<contains>!<begins><finished>q & (!q -> !<contains>!<begins><finished>q))) & [before]<met_by><met_by><meets>!t)) | (<during>[before]<met_by><met_by><meets>!t | [during]([before]![during]<begins>!![contains](!<contains>!<begins><finished>q | !!!<before>!![during]<begins>!![contains](!<contains>!<begins><finished>q | !!!((<contains>!<begins><finished>q & <contains>!<begins><finished>q) -> q))) | <before>[met_by][met_by]!<meets>!t)))",
+      "size": 124,
+      "type": "valid"
+    },
+    {
+      "formula": "([finished]<begins>!<finished>!<before><begun_by><ended_by><before>s | <finished>[begins]![finished]<met_by><met_by><contains><met_by><met_by>s)",
+      "size": 24,
+      "type": "valid"
+    },
+    {
+      "formula": "(![before]((!(s & (!(<overlapped_by>!q | q) | <meets>!t)) -> !<overlapped_by>!![before]((s & (!![overlapped_by]q & !q)) | (s & ![meets]t))) -> ![overlapped_by]<before>!((s & (!![overlapped_by]q & !q)) | (s & ![meets]t))) | (<before>(![overlapped_by]<before>!((s & (!![overlapped_by]q & !q)) | (s & ![meets]t)) & (!(s & (!![overlapped_by]q & !q)) & (!s | [meets]t))) | !<before>[overlapped_by]<before>!((s & (!![overlapped_by]q & !q)) | (s & ![meets]t))))",
+      "size": 113,
+      "type": "valid"
+    },
+    {
+      "formula": "(<met_by>(![begins]![finished]<meets><meets>q & [begun_by](q & !!q)) | (<met_by>[begins]<finished>!<later>q | [met_by]<begun_by>!q))",
+      "size": 29,
+      "type": "valid"
+    },
+    {
+      "formula": "([begins][finished][during]<begins>!<later>!(<finished><begins>!(<contains>!<later>!p & q) & q) | <finished><begins><during>[begins]<meets><meets>(!<begins><finished>(!![contains]![later]p | !q) | !q))",
+      "size": 44,
+      "type": "valid"
+    },
+    {
+      "formula": "([begun_by][begun_by][overlaps][later]((s | ![ended_by]<finished><begun_by><ended_by>!<meets><meets>(!((<overlaps>r -> s) -> ![during](!<finished><begun_by>r | s)) | !(!(((r & p) | (r & t)) -> s) | !t))) | (s | !!<ended_by>!<overlaps>![ended_by]<later>!((!(<overlaps>r -> s) | <during>!(<overlaps>r -> s)) & !((!(r & (p | t)) | s) & t)))) | ![begun_by][finished][begun_by][meets][meets](s | <ended_by>!<overlaps>![ended_by]<later>!((!(<overlaps>r -> s) | <during>!(<overlaps>r -> s)) & !((!(r & (p | t)) | s) & t))))",
+      "size": 121,
+      "type": "valid"
+    },
+    {
+      "formula": "((!(!(<before>!![overlapped_by]![overlapped_by]!(q & <begun_by>!<before>q) & !!![before]<overlapped_by>!<overlapped_by>!(!q | !<begun_by>!<before>q)) -> !(<ended_by><begun_by>!(q & <begun_by>!<before>q) & !!<begun_by><ended_by>!(q & <begun_by>!<before>q))) & !!<ended_by><begun_by>!(q & ![begun_by]<met_by><met_by>q)) | (!<ended_by><begun_by>!(q & <begun_by>!<before>q) | (!<ended_by><begun_by>!(q & <begun_by>!<before>q) | ![before]![overlapped_by]![overlapped_by]!(q & <begun_by>!<before>q))))",
+      "size": 109,
+      "type": "valid"
+    },
+    {
+      "formula": "(<during>!(<begins>!<meets>!!(![contains]t | ![met_by]<begun_by><ended_by>![contains]t) -> ![meets](!![contains]t & !<met_by>!<ended_by><begun_by><contains>!t)) | (<during>[begins]<meets>!(!![contains]t & !<met_by>!<begun_by><ended_by>![contains]t) | [during]![meets](!![contains]t & !<met_by>!<begun_by><ended_by>![contains]t)))",
+      "size": 69,
+      "type": "valid"
+    },
+    {
+      "formula": "(<finished>(<begins><finished>(r & (s | <finished><begins>![later]![contains]![later]![begins]t)) & !q) | (<finished>[during]((!r | !s) & (!r | [begins][finished][later]<contains>!<later>!<begins>!t)) | [finished]q))",
+      "size": 43,
+      "type": "valid"
+    },
+    {
+      "formula": "([begun_by][ended_by][contains](t & !q) | <contains><begun_by><ended_by>(!t | q))",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "(<during>(((s & (r -> q)) | (s & r)) & (![overlaps]p & (!s | ((!!r & !q) & !r)))) | (![during](s & ((!r | q) | r)) | [during]!(<overlaps>!p & (!s | ((r & !q) & !r)))))",
+      "size": 48,
+      "type": "valid"
+    },
+    {
+      "formula": "((![begins]p | ![met_by](!<begins>!p & !<ended_by>!<during>!r)) | ([begins]p & [met_by]!(<begins>!p | ![ended_by]![during]r)))",
+      "size": 37,
+      "type": "valid"
+    },
+    {
+      "formula": "([ended_by]<during>!(!<begins>!![before]![meets]r -> !(!<met_by>!t -> !<ended_by>!<during>!(!<begins>!![before]![meets]![contains]<finished><begins>t -> !<ended_by>!<during>!(!<begins>!![before]![meets]<begins>!![before]s -> !!(<contains>q | t))))) | <ended_by>[during]((![ended_by]![during](![ended_by]![during]((!<begun_by><ended_by>q & !t) -> ![begins]<before>!<meets>!![begins]<before>!s) -> ![begins]<before>!<meets>!<contains>!<begins><finished>t) -> ![met_by]t) -> ![begins]<before>!<meets>!r))",
+      "size": 117,
+      "type": "valid"
+    },
+    {
+      "formula": "((!<before>!<later>q & <finished><begun_by>![before]<meets><meets>q) | (!<overlaps>![before]<meets><meets>q | <before>!<meets><meets>q))",
+      "size": 27,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>((!<begun_by><ended_by>(!![meets]<overlaps>q -> !<begun_by>!<overlapped_by><finished><begun_by><overlapped_by><finished><begun_by>q) | !!(<finished><begun_by>q & ![meets]<overlaps><overlaps>q)) & (![begun_by]<begins><ended_by><overlaps><begins><ended_by><overlaps>q & [meets]<finished><begun_by>q)) | (<begins>!!(<ended_by><begun_by>(![begun_by]<overlapped_by><finished><begun_by><overlapped_by><finished><begun_by>q -> <meets>!<finished><begun_by>q) & (!<finished><begun_by>q | !<meets>!<finished><begun_by><finished><begun_by>q)) | [begins]([begun_by]<overlapped_by><finished><begun_by><overlapped_by><finished><begun_by>q | <meets>[finished][begun_by]!q)))",
+      "size": 99,
+      "type": "valid"
+    },
+    {
+      "formula": "(![begins]![finished]<meets><meets><begun_by><ended_by><begins><finished>![during]q & [begins]<finished>!<later><contains><during><during>!q)",
+      "size": 24,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<finished><ended_by><finished>!![begun_by]![begun_by]![begun_by]![begun_by]<overlapped_by>!![begins]![begun_by](s & (t | (!<during>q -> !s))) & <finished>[ended_by]!![finished]<begun_by>!<begun_by>!<begun_by>!<begun_by>!![overlapped_by]<begins>!<begun_by>!((s & t) | (s & ((s & s) -> <begins><finished>q))))",
+      "size": 60,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((![ended_by]<contains>!![contains]![finished]<finished>!p & (<met_by><met_by>![contains]<contains>!<finished>!![finished]p | (q -> <contains>!![contains]![finished]<finished>!p))) & (([ended_by]<contains>!![contains]![finished]<finished>!p | !<before><contains>!![contains]![finished]<finished>!p) & ([ended_by]<contains>!![contains]![finished]<finished>!p | (!<contains>!![contains]![finished]<finished>!p & q))))",
+      "size": 84,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(![begins]<during>!<during><later>!![during]![during]<contains>!q | <meets><meets>q) & (<begins>!![during]<begins><finished>![later]<during>!<during>!![contains]q | <later>q))",
+      "size": 40,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([overlapped_by](<finished><begins>q -> s) & ([overlapped_by]<begins><finished>q & <overlapped_by>!s))",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([overlapped_by]((p -> <overlapped_by>!<overlapped_by>!q) -> (!<finished><begun_by>r | s)) & ([overlapped_by](!p | ![overlapped_by]![overlapped_by]q) & ![overlapped_by](<overlaps>r -> s)))",
+      "size": 31,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(((s & (<finished><begins><overlapped_by><contains>!s | <before>!<finished>!![overlaps](s -> <begins><ended_by>t))) & (<begins><finished><begins><ended_by>![contains]s | <meets>!![overlapped_by]![before]![finished]<overlaps>!(!<overlapped_by>t -> !s))) & ((!((s & <finished><begins><overlapped_by><contains>!s) | (s & ![before]![finished]<overlaps>!(!<overlapped_by>t -> !s))) | [finished][begins][overlapped_by][contains]s) & !(!!((s & <finished><begins><overlapped_by><contains>!s) | (s & ![before]![finished]<overlaps>!(!<overlapped_by>t -> !s))) & ![meets]<overlapped_by>!![before]![finished]<overlaps>!(!<overlapped_by>t -> !s))))",
+      "size": 121,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((<ended_by><begun_by>(!![during]![met_by]q & !![begins]![finished]![begins]![finished]q) & !!<begun_by><ended_by>!(<during>!<met_by>!q | <begins>!<finished>!<begins>!<finished>!q)) & !<ended_by><begun_by>!(<during>!![met_by]q | <begins>!<finished>!<begins>!<finished>!q))",
+      "size": 61,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([overlapped_by](!(<overlaps><contains>s & t) -> <finished><begun_by><begun_by><ended_by>s) & ([overlapped_by](!<finished><begun_by><begun_by><ended_by>s | !t) & <overlapped_by>[finished][begun_by][begun_by][ended_by]!s))",
+      "size": 31,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((((![overlapped_by]<begun_by>!q & <during>!p) | (<overlapped_by>!![begun_by]q & q)) & (![during]p | q)) & ((([overlapped_by]!!![begun_by]q | (!![during]p & !q)) | [during]p) & (([overlapped_by]![begun_by]q | ([during]p & !q)) | !q)))",
+      "size": 53,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<begun_by>!<later>!<met_by><met_by>t & [begun_by]![later]<before>t)",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!![during]<finished><begun_by>(<overlapped_by><met_by><met_by>q -> <during>!<begins><ended_by><before>q) & !(!p -> !(!![begins]![finished]<meets><meets>q | (q & 1)))) & (<during>!<overlaps>(!![during](<overlapped_by><met_by><met_by>q & 1) -> !<overlapped_by><met_by><met_by>q) | ((<begins>!<finished>!<later>q -> (q & q)) -> p)))",
+      "size": 65,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<meets><met_by>![begins]((((!s & !<ended_by>!<begins><finished>![meets]![meets]t) -> s) & (!!(s | ![ended_by]<finished><begins><meets>!<meets>!t) | s)) & 1) & <meets>[met_by][begins](!(!s & !<ended_by>!<finished><begins><meets>!<meets>!t) | s))",
+      "size": 57,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<meets>!<meets>!![finished]s & [meets]![meets]<finished>!s)",
+      "size": 15,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!<contains>!<begun_by>!<ended_by>!(<ended_by>!![later]<later>(!(!t & !q) | <contains>!<begun_by>!<ended_by>!(<ended_by>!![later]<later>(!(!t & !q) | r) -> r)) -> r)) -> (![contains]![begun_by]![ended_by](!r -> !![ended_by]<later>!<meets><meets>(!(t | q) -> ![contains]![begun_by]![ended_by](!r -> !![ended_by]<later>!<meets><meets>(!(t | q) -> !!r)))))",
+      "size": 87,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((<begins><finished>s -> ((<finished>!![finished]q & r) | (![finished]<finished>!q & s))) & (!(<finished>!![finished]q & (r | s)) & <finished><begins>s))",
+      "size": 35,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<ended_by><finished><begins><finished><finished><begins><meets>!![overlapped_by](((!r -> !s) & (r -> <meets>!![overlapped_by]![before]<before>(![contains]![before]q -> <begun_by>!(<before>!q & 1)))) | (((s & s) -> !!r) & r)) & <ended_by>[finished][finished][begins][begins][finished][meets]<overlapped_by>!(((s & s) -> !!r) & ((!r | ![meets]<overlapped_by>!<before>!<met_by><met_by>(!![begun_by]![before]q -> !<contains>!![before]q)) | r)))",
+      "size": 92,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<begins>!![overlaps](!(s -> <begins><finished><before>!![during]![during]p) | q) & [begins]<overlaps>!((!<finished><begins>![before]<during>!<during>!p -> !s) -> q))",
+      "size": 38,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<meets>!<overlaps>!![overlapped_by]q & [meets]![overlaps]<overlapped_by>!q)",
+      "size": 15,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([later](<met_by>!(((!<finished><begins><overlapped_by>!<overlapped_by>!!(p & <overlapped_by>!<finished><begun_by>![before]<meets><meets>(!p | !<overlapped_by>!<finished><begun_by>r)) -> !t) & p) | ((t -> <begins><finished>![overlapped_by]![overlapped_by](!p | !![overlapped_by]<overlaps><before>!<later>!!!(p & ![overlapped_by]<overlaps>r))) & t)) -> t) & ([later]![met_by]((t -> <begins><finished>![overlapped_by]![overlapped_by]!(p & <overlapped_by>!<finished><begun_by>![before]<meets><meets>(!p | !<overlapped_by>!<finished><begun_by>r))) & (p | t)) & <later>!t))",
+      "size": 106,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(((((![begins]<overlapped_by>!<overlaps>q & s) | (![begins]<overlapped_by>!<overlaps>q & ![contains]![later]<begins><finished>![during]![before]((q & s) | (q & r)))) & s) | ((<begins>!![overlapped_by]<finished><begun_by>q & (s | <contains>!<later>!<finished><begins><during>!<before>!(q & (s | r)))) & ![contains]![later]<finished><begins><during>!<before>!(q & (s | r)))) & !((![begins]<overlapped_by>!<overlaps>q & (s | ![contains]![later]<finished><begins><during>!<before>!(q & (s | r)))) & (s | ![contains]![later]<finished><begins><during>!<before>!(q & (s | r)))))",
+      "size": 120,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<contains><before>!<overlaps><overlapped_by>q & [begun_by][ended_by]([before]<finished><begun_by><begins><ended_by>!!q | [before]<finished><begun_by><begins><ended_by>!!q))",
+      "size": 28,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((<begins><finished>!(<begun_by><ended_by>(<before>!<finished><begins>s & ((!<met_by>!p | s) | s)) & ((<before>!<finished><begins>s & (![met_by]p -> s)) | (![before]<begins><finished>s & s))) -> <overlaps><overlapped_by><met_by>!p) & (!<finished><begun_by><begins><ended_by>![met_by]p & <finished><begins>(!<ended_by><begun_by>(<before>!<finished><begins>s & ((!<met_by>!p | s) | s)) | !(<before>!<finished><begins>s & ((!<met_by>!p | s) | s)))))",
+      "size": 91,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<ended_by>!<during>!(!<begins>!![before]![meets]<ended_by>!<during>!(!!((!<overlapped_by>p | s) & (!(!<overlapped_by>p | s) | !<begins>!(<begins><ended_by>p -> s))) -> !(!<overlapped_by>p | s)) -> !![ended_by]![before]<begins><finished>t) & [ended_by]![during](<ended_by>!<before>!<finished><begins>t -> ![begins]<before>!<meets>!![ended_by]![during]((!<overlapped_by>p | s) -> (!(!<overlapped_by>p | s) | !!((!<overlapped_by>p | s) & ![begins](!<overlapped_by>p | s))))))",
+      "size": 105,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(<overlaps>!<finished><begins><overlaps>!<finished><begins>![begins]<ended_by>!s | <ended_by>!s) & (![overlaps]<begins><finished>![overlaps]<begins><finished><begins>!![ended_by]s | ![ended_by]s))",
+      "size": 38,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((s & 1) & <contains>[during]!s)",
+      "size": 6,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!<finished><begun_by><begins><finished>!(![begun_by]s | t) | <begun_by><ended_by><later>q) & (<overlaps><during>(!<begun_by>!s & !t) & [ended_by][begun_by][meets][meets]!q))",
+      "size": 32,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([overlaps]((!<during>r | !<during>!r) -> (!(!q | (!<during>r | !<during>!r)) | (!(<begins><finished>r & ![during]r) & (!<during>r | !<during>!r)))) & ([overlaps]((!<during>r | !<during>!r) & (!<during>r | !<during>!r)) & <overlaps>((q -> (!<during>r | !<during>!r)) & ((<during>r & <during>!r) | (<during>r & <during>!r)))))",
+      "size": 89,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<overlaps>!<finished><begins>![begins](s & (<finished><begins><begun_by><ended_by><finished><begins>![meets]s | (!<begun_by><ended_by>t -> !<finished><begins><begun_by><ended_by><finished><begins>(!q | !![finished]<begins>!<during>!s)))) & [overlaps]<begins><finished><begins>!((s & <begins><finished><ended_by><begun_by><begins><finished><meets>!s) | (s & (<begins><finished><ended_by><begun_by><begins><finished>!(q & <finished>!![begins]![during]s) -> <ended_by><begun_by>t))))",
+      "size": 82,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(<finished><begun_by>(!![contains](r & (s | p)) | !![meets]![overlaps]<overlapped_by>!<meets>!<finished><begun_by>q) & ![meets]<overlaps><overlaps>!(<contains>!((r & s) | (r & p)) & <meets>!<overlaps>!![overlapped_by]![meets]<overlaps>q)) & (!!<finished><begun_by>!(<contains>!((r & s) | (r & p)) & ![meets]![overlaps]<overlapped_by>!<meets>!<finished><begun_by>q) & <meets>!<finished><begun_by><finished><begun_by>!(<contains>!((r & s) | (r & p)) & ![meets]![overlaps]<overlapped_by>!<meets>!<finished><begun_by>q)))",
+      "size": 106,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<ended_by>!<during>!(!<begins>!![before]![meets]<ended_by>!<during>!(!!(p & (!p | !<begins>!p)) -> !p) -> !![ended_by]![before]<begins><finished><ended_by>!<during>!(!<begins>!![before]![meets]<ended_by>!<during>!(!t -> !p) -> !p)) & [ended_by]![during](<ended_by>!<before>!<finished><begins>![ended_by]![during](p -> ![begins]<before>!<meets>!![ended_by]![during](p -> t)) -> ![begins]<before>!<meets>!![ended_by]![during](p -> (!p | !!(p & ![begins]p)))))",
+      "size": 113,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<finished><begins><begun_by><ended_by><finished><begins>(!<finished><begins><begun_by><ended_by><met_by>!<overlaps>!<finished><begins>![begins]!(![finished]![contains]<begun_by>!![met_by]s | <ended_by>!<finished><begun_by>s) | !![finished]<begins>!![finished]<begins>!t) & [begins][finished][ended_by][begun_by][begins][finished](<begins><finished><ended_by><begun_by>![met_by]![overlaps]<begins><finished><begins>!(!<finished>!<contains>!![begun_by]<met_by>!s & !![ended_by]<overlaps>s) & <finished>!![begins]<finished>!![begins]t))",
+      "size": 92,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!![contains]!(s & ![finished]<during>(s & (t | (!![contains]<begins>!q -> !s)))) & !s) & (<contains>!(!s | !<finished>!<begins><finished>((s & t) | (s & ((s & s) -> <contains>!![begins]q)))) | s))",
+      "size": 54,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!<finished><begins><begun_by><ended_by><finished><begins>(!((<finished>!![begins]t & <overlaps>!<finished><begins>![begins]t) | (![finished]<begins>!t & r)) | !![finished]<begins>!![finished]<begins>!<begins><finished>![overlaps]<overlaps>!<finished><begins>![begins]<during>!<overlaps>!<finished><begins>![begins]<during>!s)) -> (<begins><finished><ended_by><begun_by><begins><finished>!((<finished>!![begins]t & (![overlaps]<begins><finished><begins>!t | r)) & <finished>!![begins]<finished>!![begins]<finished><begins><overlaps>!![overlaps]<begins><finished><begins>!![during]![overlaps]<begins><finished><begins>!![during]s))",
+      "size": 112,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([finished](<begins><finished>(r & (s | <begun_by>!<begun_by>!s)) -> q) & ([finished]<during>((r & s) | (r & ![begun_by]![begun_by]s)) & ![finished]q))",
+      "size": 31,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<meets><met_by>![begins](((p -> <finished>!<begins><finished><begun_by><ended_by><contains>!s) & (!p | ![finished]<during><ended_by><begun_by>![contains]s)) & 1) & <meets>[met_by][begins]!!(!p | <finished>!<begins><finished><begun_by><ended_by><contains>!s))",
+      "size": 45,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([overlapped_by](![during]<during>r -> <begins><ended_by><begun_by><ended_by>q) & ([overlapped_by]<during>!<begins><finished>r & <overlapped_by>!<overlapped_by><contains>q))",
+      "size": 23,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!![contains]<begins>!(![during](!<begins><ended_by>s & !<meets><meets>(!<overlapped_by>s & !<during>!(<overlapped_by>s | p))) -> p) | !![later](!s & !<meets><meets>(!s & !<during>(!r | !![later]t)))) & (<contains>!![begins](!p -> !<during>!!(<overlapped_by>s | <later>!(<overlapped_by>s | <begins><finished>(!<overlapped_by>s & !p)))) & <later>!!(s | <later>!(s | <begins><finished>!(r & <later>!t)))))",
+      "size": 97,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<begins><finished>![during]<begins>!<later>(<overlapped_by><later>!p -> <begins><finished>![during]<begins>!<later>(<overlapped_by>![later]p -> s)) & [finished][begins][during]!!![begins]<meets><meets>(!<begins><ended_by><later>!p | <finished><begins><during>!![begins]<meets><meets>(!<begins><ended_by><later>!p | s)))",
+      "size": 57,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([finished](<begins><finished>![overlaps]<overlaps>!<finished><begins><before>!!(<begun_by>!<later>!<begins><finished>![before]q & <begins>!![overlaps]<finished><begun_by>![begun_by]![later]<finished><begins><before>!q) -> ![overlaps]<overlaps>!<ended_by>!![met_by]<overlapped_by>!<before>!<begun_by>!<later>!<begins><finished>![before]q) & ([finished]<during><overlaps>!![overlaps]<begins><finished>![before](!<begun_by>!<later>!<begins><finished>![before]q | !![begins]<overlaps>!<overlaps><begun_by>!<later>!<begins><finished>![before]q) & <finished>[overlaps]![overlaps]![ended_by]<met_by>!![overlapped_by]![before]<begun_by>!<later>!<begins><finished>![before]q))",
+      "size": 119,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<meets>!<overlaps>!![met_by]<overlapped_by>!<meets>!<overlaps>!![during]![during]<meets>!<overlaps>!![met_by]<overlapped_by>!<meets>!<overlaps>!![during]![during]<finished><begins><before>!!(q & <begins>!![overlaps]p) & [meets]![overlaps]<met_by>!![overlapped_by]![meets]![overlaps]<during>!<during>!![meets]![overlaps]<met_by>!![overlapped_by]![meets]![overlaps]<during>!<during>!<begins><finished>![before](!q | !![begins]<overlaps>!p))",
+      "size": 90,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<finished><ended_by><finished><begins>![begun_by]<before>!(q & (r | <begins><finished><during><begins><finished><during>(!<begun_by>!p | s))) & <finished>[ended_by][begins][finished][begun_by]![before]((q & r) | (q & <during><begins><finished><during><begins><finished>(![begun_by]p -> s))))",
+      "size": 50,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<ended_by>!<during>!<begun_by><ended_by><ended_by>!<during>!<begun_by><ended_by>q & !![ended_by]![during]<ended_by><begun_by>![ended_by]![during]<ended_by><begun_by>q)",
+      "size": 27,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((![before]<meets><meets>![begun_by]![later]<overlaps>!<met_by>!(!![begun_by]p -> !<before>!<later>![begun_by]p) -> <begun_by>!<later>!![overlaps]![met_by](![before]<meets><meets>![begun_by]p -> <begun_by>!p)) & (!![begun_by]<later>!![overlaps]<met_by>!(!![begun_by]p -> !<before>!<later>![begun_by]p) & <before>!<later>![begun_by]<later>!![overlaps]<met_by>!(!![begun_by]p -> !<before>!<later>![begun_by]p)))",
+      "size": 91,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((![ended_by]<begins>!<meets>!p & (<met_by><met_by><begins>!<meets>!p | ((!![finished]![begins]![meets]p -> !q) -> <begins>!<meets>!p))) & (([ended_by]<begins>!<meets>!p | [before][begins]<meets>!p) & ([ended_by]<begins>!<meets>!p | (!<begins>!<meets>!p & (q -> <finished>!<begins>!<meets>!p)))))",
+      "size": 74,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<ended_by>!<during>!<begun_by><ended_by><ended_by>!<during>!<begun_by><ended_by>!(q | ![met_by](!q & !t)) & [ended_by]![during]<ended_by><begun_by>![ended_by]![during]<ended_by><begun_by>(!q & !<met_by>!!(q | t)))",
+      "size": 45,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<overlapped_by>!![before]<meets><meets>![finished]<ended_by><begun_by>![met_by]<contains>!<overlapped_by>!![before]<meets><meets>![finished]<ended_by><begun_by>![met_by]<contains>!(!(!(<before>!<finished><begins>![meets]q & !!![before]<begins><finished><meets>!q) -> !(<ended_by><begun_by>t & !!<begun_by><ended_by>t)) -> !!!<ended_by><begun_by>t) & [overlapped_by]<before>!<later><finished>!<begun_by><ended_by><met_by>!![contains]![overlapped_by]<before>!<later><finished>!<begun_by><ended_by><met_by>!![contains](!!<ended_by><begun_by>t -> (!!<ended_by><begun_by>t -> !!![before]<finished><begins>![meets]q)))",
+      "size": 113,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([met_by](!(r & (<begun_by>!r -> <contains>!<finished><begins><during>((![during]![later]<overlapped_by>s & q) | (<during>!<later>!<overlapped_by>s & <begins><ended_by>s)))) -> q) & ([met_by](!r | !(!![contains]<begins><finished><begins><finished>(<during>!<later>!<overlapped_by>s & (q | <overlapped_by>s)) -> !![begun_by]r)) & <met_by>!q))",
+      "size": 66,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begun_by](<overlaps>(![finished]![overlapped_by]![finished]![meets]s & 1) -> ![begins]<before>!![meets]<begun_by><ended_by><finished><begun_by><finished>!<overlapped_by>!<finished>!<meets>!s) & ([begun_by]<finished><begun_by>(<finished>!<overlapped_by>!<finished>!<meets>!s & 1) & <begun_by>[begins]![before]<meets>!<contains><finished><begun_by>(<finished>!<overlapped_by>!<finished>!<meets>!s & 1)))",
+      "size": 67,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![contains]<contains>!<finished>!![finished]<before>p & [contains]![contains]![finished]<finished>!<met_by><met_by>p)",
+      "size": 22,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([met_by]<before>t | <met_by>[met_by]!<met_by>t)",
+      "size": 10,
+      "type": "valid"
+    },
+    {
+      "formula": "([before]<before>q | <before>[met_by][met_by]!q)",
+      "size": 10,
+      "type": "valid"
+    },
+    {
+      "formula": "(<later>(<met_by>!<later>![later]q & [later][meets][meets](!<later>!!!q | 0)) | (<later>[met_by]<later>![later]q | [later]<meets><meets><later>![later]q))",
+      "size": 33,
+      "type": "valid"
+    },
+    {
+      "formula": "(<meets>(((s & t) | (s & !!r)) & (q | (s & (t | !!r)))) | (<meets>(!s | (!t & !r)) | [meets]!(q | (s & (t | !!r)))))",
+      "size": 43,
+      "type": "valid"
+    },
+    {
+      "formula": "!(<later><before>s & [meets][meets][met_by][met_by]!s)",
+      "size": 9,
+      "type": "valid"
+    },
+    {
+      "formula": "([before]<before>![meets](s -> ![meets]t) | <before>[met_by][met_by]!<meets>!(!<meets>!t -> !s))",
+      "size": 24,
+      "type": "valid"
+    },
+    {
+      "formula": "(<later>(<met_by>!q & !t) | (<later>[met_by]q | [later]t))",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "!([met_by](s -> <met_by><met_by>q) & ([met_by]s & <met_by>[before]!q))",
+      "size": 13,
+      "type": "valid"
+    },
+    {
+      "formula": "((q | ![meets]r) | (!q & [meets]r))",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "((!s | (!p & [met_by]<later>!t)) | (!(!s | !p) | (s & <met_by>[later]t)))",
+      "size": 21,
+      "type": "valid"
+    },
+    {
+      "formula": "([met_by][meets][met_by][met_by]!q | !<met_by>[meets][before]!q)",
+      "size": 10,
+      "type": "valid"
+    },
+    {
+      "formula": "(<meets>(!(s & q) & !t) | (<meets>(s & q) | [meets]!!t))",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "(<meets>(!!s & !p) | (<meets>!s | [meets]p))",
+      "size": 12,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets](p & p) | ![meets]p)",
+      "size": 9,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets]<later>!t | <meets>[later]t)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "(((!r | (((!r | (!s & [meets]r)) | ([meets]r & !r)) & [meets]r)) | ([meets](r & 1) & !r)) | ((((r & (!(((!r | !s) & (!r | [meets]r)) | [meets]r) | (((r & s) | !(!r | [meets]r)) & r))) | (r & <meets>!r)) & ![meets]r) | (((r & ((((r & s) | !(!r | [meets]r)) & <meets>!r) | (((r & s) | (!!r & <meets>!r)) & r))) | (r & <meets>!r)) & r)))",
+      "size": 100,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets][meets][meets]!r | <meets><meets>r)",
+      "size": 10,
+      "type": "valid"
+    },
+    {
+      "formula": "(((t & [met_by]p) | ![met_by]p) | !t)",
+      "size": 13,
+      "type": "valid"
+    },
+    {
+      "formula": "(((!(s & (p | <met_by>!s)) | p) | (((s & (p | <met_by>!s)) & !p) & ((!s | !p) & (!s | [met_by]s)))) | (s & (p | <met_by>!s)))",
+      "size": 39,
+      "type": "valid"
+    },
+    {
+      "formula": "(!r | !<met_by>[meets]!r)",
+      "size": 7,
+      "type": "valid"
+    },
+    {
+      "formula": "!(<meets><meets>(s & 1) & [later]!s)",
+      "size": 7,
+      "type": "valid"
+    },
+    {
+      "formula": "!([later](s -> ![meets]t) & ([later]s & <later>[meets]t))",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "(<met_by>(s & !p) | (<met_by>(!s | 0) | [met_by]p))",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "!(<before>!![meets]s & [before]<meets>!s)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "(((p -> ![met_by]<before>!(r & 1)) | ![met_by](!(!<met_by>!![before]r -> !p) & !![later]((!p | !q) & (s | t)))) | ((p & !![met_by]![before]r) & [met_by]!((p -> ![met_by]![before]r) | <later>!((!(p & q) & s) | (!(p & q) & t)))))",
+      "size": 72,
+      "type": "valid"
+    },
+    {
+      "formula": "(([meets]t | ((!<meets>!t & t) & !t)) | ((<meets>!t & (!t | ![meets]t)) | (![meets]t & t)))",
+      "size": 29,
+      "type": "valid"
+    },
+    {
+      "formula": "(!!(q | ![meets]<meets><meets>p) | (!q & [meets]<later>p))",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "(!<met_by>!![later]t | <met_by>[later]t)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "(<later>(<met_by>!(((!(r & (p | t)) -> !t) & p) | ((t -> ((r & p) | (r & t))) & t)) & !t) | (<later>[met_by]((t -> (r & (p | t))) & (p | t)) | [later]t))",
+      "size": 46,
+      "type": "valid"
+    },
+    {
+      "formula": "(<meets>!(s -> !(q | s)) | (<meets>!s | [meets](!q & !s)))",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "(!(!p | <before>!<meets>!p) | (!p | <before>[meets]p))",
+      "size": 16,
+      "type": "valid"
+    },
+    {
+      "formula": "(<meets>!(!(s & q) -> r) | (<meets>(s & !!q) | [meets]r))",
+      "size": 19,
+      "type": "valid"
+    },
+    {
+      "formula": "([before]<before><met_by>!!(q | s) | <before>[met_by][met_by]!![met_by](!q & !s))",
+      "size": 21,
+      "type": "valid"
+    },
+    {
+      "formula": "!([meets]((!p -> !s) -> (q & q)) & ([meets](s -> p) & <meets>!q))",
+      "size": 18,
+      "type": "valid"
+    },
+    {
+      "formula": "(<met_by>((!((![meets]t & r) | (<meets>!t & q)) | p) & !p) | (<met_by>((![meets]t & (r | q)) & !p) | [met_by]p))",
+      "size": 31,
+      "type": "valid"
+    },
+    {
+      "formula": "(!![before]![met_by]s | <before>[met_by]!!s)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "((((!s | [met_by]s) & (!s | !r)) | (!<met_by>!s & !r)) | (((s & (<met_by>!s | r)) & <met_by>!s) | (!(!s | ([met_by]s & !r)) & r)))",
+      "size": 37,
+      "type": "valid"
+    },
+    {
+      "formula": "([before]<met_by>!p | ![before]![met_by]p)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets][meets][meets](!(![later]t | q) & !p) | <meets><meets>((<later>!t | q) | p))",
+      "size": 24,
+      "type": "valid"
+    },
+    {
+      "formula": "((<meets><meets>p & !q) | (q | [later]!p))",
+      "size": 12,
+      "type": "valid"
+    },
+    {
+      "formula": "((!(!(q & !!q) -> !<met_by><met_by>q) & <before>q) | ([before]!q | ([before]!q | q)))",
+      "size": 26,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets]<meets>!![later]t | ![meets]![meets]<later>!t)",
+      "size": 15,
+      "type": "valid"
+    },
+    {
+      "formula": "!(<before>!![meets]p & [before]<meets>!p)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "(![met_by](!(r & t) -> (!r | !t)) | (<met_by>(!!r & t) | [met_by]!(r & t)))",
+      "size": 24,
+      "type": "valid"
+    },
+    {
+      "formula": "([later]<later>(!(!t & !q) | p) | <later>[meets][meets](!(t | q) & !p))",
+      "size": 22,
+      "type": "valid"
+    },
+    {
+      "formula": "((!r | ([met_by]p & [meets]p)) | ((r & <met_by>!p) | (r & <meets>!p)))",
+      "size": 21,
+      "type": "valid"
+    },
+    {
+      "formula": "(!![before]<before>![meets]t | <before>[met_by][met_by][meets]t)",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "((!r | ([meets]p & !p)) | !((!r | [meets]p) & (!r | !p)))",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "([before]<before>![meets]<met_by><met_by>![before]<before>![meets]t | <before>[met_by][met_by][meets]!!<before><before>!<met_by><met_by><meets>!t)",
+      "size": 28,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets][meets][meets](!(t | q) & !p) | ![meets][meets]((!t & !q) & !p))",
+      "size": 20,
+      "type": "valid"
+    },
+    {
+      "formula": "(![later]<later>(!q | p) & !<later>!<meets><meets>(q -> p))",
+      "size": 15,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([later](<met_by>!s -> t) & ([later]![met_by]s & <later>!t))",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(q | ![meets]<meets><meets>p) & (!!q | !!<meets>!<later>p))",
+      "size": 17,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([later](<met_by>!<later>![later]q -> <later><meets><meets>(<later>!!!q & 1)) & ([later]![met_by]<later>![later]q & <later>[meets][meets][later][later]q))",
+      "size": 33,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((s & (((s & p) | (s & ![meets](s & (p | q)))) | <meets>!((s & (s & (p | <meets>!((s & p) | (s & q))))) | (s & q)))) & ((!s | ((!s | !p) & (!s | [meets](s & (p | q))))) & (!s | [meets](s & (((s & p) | (s & ![meets](s & (p | q)))) | q)))))",
+      "size": 75,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(((<meets><meets>q -> t) & !t) & <later>q)",
+      "size": 12,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<meets>!<meets>!t & [meets]![meets]t)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([later](<met_by>!((r & p) | (r & t)) -> t) & ([later]![met_by](r & (p | t)) & <later>!t))",
+      "size": 24,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<met_by>[meets](s & 1) & !s)",
+      "size": 6,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![met_by]<before>t & [met_by]<met_by><met_by>t)",
+      "size": 10,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([met_by](![before]<before>r -> t) & ([met_by]<before>!<met_by><met_by>r & <met_by>!t))",
+      "size": 17,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(!!(r | (!r & !<met_by>!s)) & !!((!r & !!(r | ![met_by]s)) | <met_by>!s))) -> (!(!(r | (!r & !<met_by>!s)) | (!!(r | (!r & !<met_by>!s)) & !<met_by>!s)))",
+      "size": 57,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![before]<before>![meets](s -> ![meets]t) & [before]<met_by><met_by><meets>!(!<meets>!t -> !s))",
+      "size": 24,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(p & <met_by>!p) & !(!p | !![met_by]p))",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![meets](![later](q & q) -> q)) -> (([meets]<later>!q -> [meets]q))",
+      "size": 16,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<meets><meets><meets><met_by><met_by>r & [meets][meets][before]!r)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(!!(r | (!r & !<met_by>!![before]r)) & !!((!r & !!(r | ![met_by]![before]r)) | <met_by>!<before>!r))) -> (!(!(r | (!r & !<met_by>!![before]r)) | (!!(r | (!r & !<met_by>!![before]r)) & !<met_by>!![before]r)))",
+      "size": 69,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(((r & ![meets]t) | (r & !(s | t))) & (!r | ([meets]t & (s | t))))",
+      "size": 24,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<meets>!<later>!t & [meets]![later]t)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(q | ![met_by](!q & !t)) & (q | <met_by>!!(q | t)))",
+      "size": 21,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((<meets><meets>p -> q) & (!q & <later>p))",
+      "size": 12,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(((r & (((r & (s | ![meets]p)) & (![meets]p | p)) | ![meets]p)) & (![meets]p | p)) & ((!((r & ((((r & s) | (r & <meets>!p)) & <meets>!p) | (((r & s) | (r & <meets>!p)) & p))) | (r & <meets>!p)) | [meets]p) & (((!r | ((!((r & s) | (r & <meets>!p)) | [meets]p) & (((!r | !s) & (!r | [meets]p)) | !p))) & !(r & <meets>!p)) | !p)))",
+      "size": 99,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<later><later><met_by><met_by>q & [later][before]!q)",
+      "size": 9,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![before]<before><met_by>!s & [before]<met_by><met_by>![met_by](s & s))",
+      "size": 16,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(((<meets><meets>p & ![meets]t) | (<later>(p & p) & !(s | t))) & ([meets][meets]!p | !(<meets>!t | (!s & !t))))",
+      "size": 31,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(<before><before>s & r) & (<met_by><met_by><met_by><met_by>s & r))",
+      "size": 16,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!<before>p & !p) & (<met_by><met_by>p | p))",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(((s & (p | q)) & (p | <meets>!t)) & ((!!!((s & p) | (s & q)) | !p) & (!((s & p) | (s & q)) | [meets]t)))",
+      "size": 37,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<meets>!<meets>!![later]t & [meets]![meets]<later>!t)",
+      "size": 15,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!![met_by]<before>t | !q) & !!(<met_by>!<met_by><met_by>t & q))",
+      "size": 17,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![before]<before>![meets](s -> q) & [before]<met_by><met_by><meets>!(!q -> !s))",
+      "size": 20,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(((q -> ![meets]p) & !<meets>!p) & q)",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<later>!<meets><meets><later>q & [later]<later><meets><meets>q)",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![later](![meets]((q & 1) & (t | r)) -> ((q & t) | (q & r)))) -> (([later]<meets>!((q & t) | (q & r)) -> [later]((q & t) | (q & r))))",
+      "size": 37,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![before]<before>![meets]<met_by><met_by>![before]<before>![meets]t & [before]<met_by><met_by><meets>!<before><before>!<met_by><met_by><meets>!t)",
+      "size": 28,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([later](![meets]((s & (t | r)) & (t | r)) -> ((((s & t) | (s & r)) & t) | (((s & t) | (s & r)) & r))) & ([later]<meets>!((((s & t) | (s & r)) & t) | (((s & t) | (s & r)) & r)) & <later>((((!s | !t) & (!s | !r)) | !t) & (((!s | !t) & (!s | !r)) | !r))))",
+      "size": 76,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([met_by]((!q | p) -> p) & ([met_by](q -> p) & <met_by>!p))",
+      "size": 15,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(<later>q | p) & (<meets><meets>q | p))",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([later](![meets]((!q & !s) & (t | r)) -> ((!(q | s) & t) | (!(q | s) & r))) & ([later]<meets>!((!(q | s) & t) | (!(q | s) & r)) & <later>(((q | s) | !t) & !(!(q | s) & r))))",
+      "size": 58,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![meets]<meets><meets>p & [meets]<later>p)",
+      "size": 10,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(!s & !<meets><meets>q)) -> (!(s | <later>q))",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<met_by><meets>!!p & <met_by>[meets]!p)",
+      "size": 9,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![before]<before><met_by>!!(q | s) & [before]<met_by><met_by>![met_by](!q & !s))",
+      "size": 21,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(((<met_by>!s -> p) & !p) & ![met_by]s)",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([met_by](s -> ![before]r) & ([met_by]s & <met_by>[before]!!!!r))",
+      "size": 16,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<met_by><meets><met_by><met_by>q & <met_by>!<meets><before>q)",
+      "size": 10,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!!((p -> ![met_by]<before>!(r & 1)) | ![met_by](!(!<met_by>!![before]r -> !p) & !![later]s))) -> ((!(p -> ![met_by]![before]r) & !<met_by>!!((p -> ![met_by]![before]r) | <later>!s)))",
+      "size": 52,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((((s & ![met_by]s) | (s & r)) & (<met_by>!s | r)) & !(((s & (<met_by>!s | r)) & <met_by>!s) | ((s & (<met_by>!s | r)) & r)))",
+      "size": 37,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(!(!(!(r | (!s | p)) & (p | <met_by>!!(r | (!s | p)))) | p) & (((!(r | (!s | p)) & (p | <met_by>!!(r | (!s | p)))) -> p) | ((!(r | (!s | p)) & p) | ((!r & !(s -> p)) & ![met_by]!(r | (!s | p))))))) -> ((!(r | (!s | p)) & (p | <met_by>!!(r | (!s | p)))))",
+      "size": 93,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<met_by>!<later>q & [met_by]<meets><meets>q)",
+      "size": 10,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((![begun_by]((s & (r -> q)) | (s & r)) | !(![begun_by](s & ((!r | q) | r)) | s)) | ([begun_by]!!(s & ((!r | q) | r)) & (<begun_by>!(s & ((!r | q) | r)) | s)))",
+      "size": 54,
+      "type": "valid"
+    },
+    {
+      "formula": "(![begins](q -> (!p & !(!(!p & !r) & !r))) | (![begins]q | [begins](!p & (!(p | r) | r))))",
+      "size": 31,
+      "type": "valid"
+    },
+    {
+      "formula": "(<finished>(r & [ended_by]p) | (![finished]r | [finished]<ended_by>!p))",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "(<before>(t & (t & (!t | (!p & !s)))) | (<before>!t | [before](!t | ((t & p) | (t & s)))))",
+      "size": 25,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(<before>!t & (t & q)) | (<begins>[before]t | [begins](!t | !q)))",
+      "size": 21,
+      "type": "valid"
+    },
+    {
+      "formula": "(((r & [finished]q) | ![finished]q) | !r)",
+      "size": 13,
+      "type": "valid"
+    },
+    {
+      "formula": "(([before]![begins]p | (<before>!<begins>!(p & p) & !s)) | !!s)",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "!((!![finished]p & (<finished>!p | r)) & !r)",
+      "size": 12,
+      "type": "valid"
+    },
+    {
+      "formula": "((![later]![begun_by]r & [before]r) | ([later]<begun_by>!r | <before>!r))",
+      "size": 20,
+      "type": "valid"
+    },
+    {
+      "formula": "([finished][finished](!s | !s) | <finished>s)",
+      "size": 8,
+      "type": "valid"
+    },
+    {
+      "formula": "((r | (s -> ![begun_by]q)) | (!r & (!!s & [begun_by]q)))",
+      "size": 19,
+      "type": "valid"
+    },
+    {
+      "formula": "(((r & (q | ![begins]q)) | (!t & (!!(q | <begins>!q) & (r -> !(q | <begins>!q))))) | !(((r & (q | <begins>!q)) | !t) & ((r & (q | <begins>!q)) | (((!r | !(q | <begins>!q)) & (!r | !(q | <begins>!q))) & (q | <begins>!q)))))",
+      "size": 79,
+      "type": "valid"
+    },
+    {
+      "formula": "([later]!!q | ![later](q & q))",
+      "size": 9,
+      "type": "valid"
+    },
+    {
+      "formula": "((<ended_by>!(!r -> !!(t & <before>!t)) & !r) | (!!r | [ended_by]((!t | !![before](t & 1)) -> r)))",
+      "size": 31,
+      "type": "valid"
+    },
+    {
+      "formula": "([ended_by]<finished>!(q & !!q) | <ended_by>[finished]!!q)",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "([later][later]([begun_by]![begun_by]![begun_by]r | 0) | <later><begun_by>!<begun_by>!<begun_by>!r)",
+      "size": 19,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(q & !(!p & !r)) | (<begins>!q | [begins](!p & !r)))",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "!([begun_by](![later](!s | (s -> p)) -> s) & ([begun_by]<later>!(s -> (!s | p)) & <begun_by>!s))",
+      "size": 24,
+      "type": "valid"
+    },
+    {
+      "formula": "!(<begins>[begun_by](r & r) & !r)",
+      "size": 7,
+      "type": "valid"
+    },
+    {
+      "formula": "((!![ended_by]p | (!q & !t)) | ((<ended_by>!p & q) | (<ended_by>!p & t)))",
+      "size": 19,
+      "type": "valid"
+    },
+    {
+      "formula": "((((q | <begins>!q) | !t) & ((q | ![begins]q) | (!(q | <begins>!q) & [begun_by]r))) | ((!q & [begins]q) & (t | (![begun_by]r | !!(q | <begins>!q)))))",
+      "size": 49,
+      "type": "valid"
+    },
+    {
+      "formula": "([finished]![finished]p | <finished>[finished]p)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "(<ended_by>!(!(q & r) -> s) | (<ended_by>(q & r) | [ended_by]s))",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "!(!(t & <before>!t) & (t & ![before](t & 1)))",
+      "size": 15,
+      "type": "valid"
+    },
+    {
+      "formula": "((![before]q | ([before]q & ((r -> q) & q))) | ((r & !q) | !q))",
+      "size": 24,
+      "type": "valid"
+    },
+    {
+      "formula": "(([later]t | ((!<later>!t & ![begun_by]s) & [begun_by]s)) | ((<later>!t & ([begun_by]s | <later>!t)) | (<later>!t & <begun_by>!s)))",
+      "size": 37,
+      "type": "valid"
+    },
+    {
+      "formula": "(<ended_by>((t -> s) & [ended_by]s) | (<ended_by>(t & !s) | [ended_by]<ended_by>!s))",
+      "size": 19,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begun_by>(p & [begins]t) | (<begun_by>!p | [begun_by]<begins>!t))",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "([begins]<begun_by>(!q | !q) | q)",
+      "size": 7,
+      "type": "valid"
+    },
+    {
+      "formula": "(!!(![begun_by]r | !(![begun_by]r | ![before](!q -> !s))) | ([begun_by]r & (<begun_by>!r | <before>!(s -> q))))",
+      "size": 35,
+      "type": "valid"
+    },
+    {
+      "formula": "!(![begun_by]<before>!s & [begun_by]![before]s)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "(!(!(s | t) & (<begins>!<later>!t | t)) | (((!s & !t) & <begins>[later]t) | ((!s & !t) & t)))",
+      "size": 32,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begun_by>(q & !q) | (<begun_by>!q | [begun_by]q))",
+      "size": 12,
+      "type": "valid"
+    },
+    {
+      "formula": "(!(s & (![begins]p | t)) | ((!!s & <begins>!p) | (!!s & t)))",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "(!(!(p -> s) | !(!(p -> s) | !<ended_by>!t)) | ((p & !s) | ((!p | s) & ![ended_by]t)))",
+      "size": 31,
+      "type": "valid"
+    },
+    {
+      "formula": "((<ended_by>!p & !r) | (r | !![ended_by]p))",
+      "size": 13,
+      "type": "valid"
+    },
+    {
+      "formula": "(<later>(<begins>!!(s | p) & !t) | (<later>[begins](!s & !p) | [later]t))",
+      "size": 21,
+      "type": "valid"
+    },
+    {
+      "formula": "([finished]<before>!q | <finished>[before]q)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "!((<ended_by>!(!r -> !<finished>!!!r) -> r) & (!r & ![ended_by](![finished]r -> r)))",
+      "size": 25,
+      "type": "valid"
+    },
+    {
+      "formula": "((((!s | !s) | ([before]((!![begun_by]r -> !s) & 1) | (!t & (!![begun_by]r & s)))) & (!s | (s & [begun_by](s -> <begun_by>!r)))) | (s & (!(([before](!![begun_by]r -> !s) | !t) & ([before](!![begun_by]r -> !s) | (!![begun_by]r & s))) | (![begun_by](!![begun_by]r -> !s) | !s))))",
+      "size": 82,
+      "type": "valid"
+    },
+    {
+      "formula": "(<ended_by>(p & !s) | (<ended_by>!p | [ended_by]!(!s | 0)))",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "((!<begins>!r & q) | (!q | <begins>!r))",
+      "size": 15,
+      "type": "valid"
+    },
+    {
+      "formula": "((!(!(t & (((t & p) | (t & s)) | s)) -> !![ended_by](!(!p -> !s) -> !s)) & <ended_by>!(s -> (s -> p))) | !(<ended_by>!(s -> (s -> p)) & (<ended_by>!(s -> (s -> p)) & ((!t | (!t | (!p & !s))) & (!t | !s)))))",
+      "size": 63,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begun_by>((!r | !t) & !p) | (<begun_by>(r & t) | [begun_by]p))",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "((q & ![before]r) | (!q | [before]r))",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "((![before]q | ([before]q & (s & q))) | (!s | !q))",
+      "size": 19,
+      "type": "valid"
+    },
+    {
+      "formula": "((![before]t & !q) | (q | [before]t))",
+      "size": 13,
+      "type": "valid"
+    },
+    {
+      "formula": "((((!(p -> ![later]t) | !t) -> ![later]t) & t) | (!(!!((!p | <later>!t) & t) | <later>!t) | !t))",
+      "size": 35,
+      "type": "valid"
+    },
+    {
+      "formula": "!(![before]![later]p & [before]<later>!p)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "(<before>(q & (!q | !q)) | (<before>!q | [before]q))",
+      "size": 12,
+      "type": "valid"
+    },
+    {
+      "formula": "((!p | <before>!r) & (p & [before]r))",
+      "size": 12,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(((![ended_by](!r -> !s) & (s -> r)) | (<ended_by>!(s -> r) & p)) & ([ended_by](s -> r) | ((s & !r) & !p)))",
+      "size": 31,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<later><later>(![begun_by]![begun_by]![begun_by]q & 1) & [later][begun_by]<begun_by>!<begun_by>!(q & 1))",
+      "size": 20,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!<begins>!((!r -> !q) -> r) -> !q) & (!!q & !![begins](!r -> !(!!q -> r))))",
+      "size": 29,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<ended_by>!![ended_by]t & [ended_by]<ended_by>!t)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<later>!s & [later]!!s)",
+      "size": 9,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![finished]<finished>!q & [finished]![finished]q)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((s -> <begun_by>!r) & (!![begun_by]r & s))",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((![before]t -> q) & (!q & <before>!t))",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!(!(t & (((t & p) | (t & s)) | s)) -> !![ended_by]q) -> !<ended_by>!q) & !(<ended_by>!q -> (<ended_by>!q -> ((t & (t & (p | s))) | (t & s)))))",
+      "size": 43,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([finished](r -> <before>!q) & ([finished]r & <finished>[before]q))",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![finished]![finished]p & [finished]<finished>!p)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<later><later>(![begun_by]![begun_by]![begun_by]r & 1) & [later][begun_by]<begun_by>!<begun_by>!r)",
+      "size": 19,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<before>!(r & 1) & [before]r)",
+      "size": 8,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<ended_by>!<finished>!(q & !!q) & [ended_by]![finished]!!q)",
+      "size": 17,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](q -> (!r -> !s)) & ([begins]q & ![begins](s -> r)))",
+      "size": 16,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([ended_by](p -> s) & ([ended_by]p & <ended_by>(!s | 0)))",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!(s | t) & (<begins>!r | t)) & (((!!s | !!t) | [begins]r) & ((s | t) | !t)))",
+      "size": 28,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](<before>!t -> r) & ([begins]![before]t & <begins>!r))",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!(q -> s) | !<begins>!(!q | s)) & ((!q | s) & ![begins](!q | s)))",
+      "size": 25,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([finished](<later>!t -> t) & !([finished]![later]t -> [finished]t))",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<later><later>(q & 1) & [later]!q)",
+      "size": 7,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![begun_by]<before>!s & [begun_by]![before]s)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<finished>[ended_by]![before]t & !!!<before>!t)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((<ended_by>!(!r -> !q) -> r) & (!r & ![ended_by](q -> r)))",
+      "size": 19,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<begins>[begun_by](q & q) & !q)",
+      "size": 7,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([before]((!![begun_by]q -> !![later]t) -> <later>!t) & ([before](![later]t -> <begun_by>!q) & <before>[later]t))",
+      "size": 28,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([before](t -> (!t | (t & (p | s)))) & ([before]t & <before>(t & ((!t | !p) & (!t | !s)))))",
+      "size": 25,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!q | !![ended_by]q) & (q & (<ended_by>!q & 1)))",
+      "size": 15,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![begun_by]<begun_by>!r & [begun_by]![begun_by]r)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((![before]r & (<before>!r -> s)) & !s)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins]((!q | !t) -> r) & ([begins]!(q & t) & <begins>!r))",
+      "size": 17,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(<ended_by>!(!r -> !!!(p & p)) -> r)) -> ((!r -> !![ended_by](p -> r)))",
+      "size": 23,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((<ended_by>!(!r -> !<finished>!!!r) -> r) & (!r & ![ended_by](![finished]r -> r)))",
+      "size": 25,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((<begins>!t & (s | p)) & (([begins]t | !s) & ([begins]t | !p)))",
+      "size": 19,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((r & ((!r -> !![begun_by]s) | <begun_by>!s)) & ((!r | (![begun_by]s & !r)) & (!r | !![begun_by]s)))",
+      "size": 27,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([finished](t -> !!t) & !([finished]t -> [finished]t))",
+      "size": 12,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([before](t -> (!t | s)) & ([before]t & <before>!(t -> s)))",
+      "size": 15,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(((!p | !![begins]r) & ((!!(p & <begins>!r) -> !![begun_by](!<begun_by>!![begins]p & !t)) | <begun_by>!!(![begun_by]<begins>!(p & p) | t))) & !((!(p & <begins>!r) & (![begun_by](!<begun_by>!![begins]p & !t) -> !(p & <begins>!r))) | (!(p & <begins>!r) & ![begun_by](!<begun_by>!![begins]p & !t))))",
+      "size": 86,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<later><later>(![begun_by]r & 1) & !<later><begun_by>!r)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(((t -> ![begins]q) & !<begins>!q) & t)",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begun_by](![before]![before]q -> <before>!q) & ([begun_by]<before>!![before]q & <begun_by>[before]q))",
+      "size": 22,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![later]((r & 1) & 1) & [later]r)",
+      "size": 9,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((p -> <finished>!q) & (p & [finished]q))",
+      "size": 12,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!r -> !<begun_by>!s) & (![begun_by]s & !r))",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(<before>!(<ended_by>!q & 1) & q) & (![before]![ended_by]q & q))",
+      "size": 19,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!(!(t & (((t & p) | (t & (!p -> !s))) | (s -> p))) -> !![ended_by](!(!p -> !(!p -> !s)) -> !(!p -> !s))) -> !<ended_by>!((!p -> !s) -> ((!p -> !s) -> p))) & !(<ended_by>!((!p -> !s) -> ((!p -> !s) -> p)) -> (<ended_by>!((!p -> !s) -> ((!p -> !s) -> p)) -> ((t & (t & (p | (!p -> !s)))) | (t & (!p -> !s))))))",
+      "size": 109,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<later>!p & <finished>[ended_by]!![later]p)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begun_by](<before>!p -> t) & ([begun_by]![before]p & <begun_by>!t))",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((<begun_by>!r -> p) & (!p & ![begun_by]r))",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<begun_by>(<meets>!<begun_by>!r & ([meets]<begun_by>!r | !!!![meets]![begun_by]r)) | (<begun_by>[meets]<begun_by>!r | [begun_by]<meets>!<begun_by>!r))",
+      "size": 36,
+      "type": "valid"
+    },
+    {
+      "formula": "([ended_by]<before>(q & !!q) | <ended_by>!<met_by><met_by>!!q)",
+      "size": 16,
+      "type": "valid"
+    },
+    {
+      "formula": "([ended_by]<before>![ended_by]q | <ended_by>[met_by][met_by][ended_by]q)",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "(!(!<ended_by>!<before>r | !r) | ([ended_by]<met_by><met_by>r | !r))",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begun_by>((!t & !<meets><meets>(s & 1)) & !r) | (<begun_by>(t | <later>s) | [begun_by]r))",
+      "size": 21,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets]![begins]p | <meets>[begins]p)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "!(![finished]<met_by><met_by>s & [finished]<before>s)",
+      "size": 10,
+      "type": "valid"
+    },
+    {
+      "formula": "(![ended_by](<met_by><met_by>(p & (s | t)) -> r) | (<ended_by>[before](!(p & s) & (!p | !t)) | [ended_by]r))",
+      "size": 23,
+      "type": "valid"
+    },
+    {
+      "formula": "((!s | ([begins]p & [meets]t)) | ((s & <begins>!p) | !(!s | [meets]t)))",
+      "size": 25,
+      "type": "valid"
+    },
+    {
+      "formula": "((![before]<meets><meets>p | ([before]<later>p & ((((s & t) | (s & (s -> <begun_by>!r))) -> <later>p) & <later>p))) | ((!!(s & (t | (!![begun_by]r -> !s))) & [later]!p) | [later]!p))",
+      "size": 51,
+      "type": "valid"
+    },
+    {
+      "formula": "(<ended_by>(<met_by><met_by>(p & (s | t)) & (q | ![met_by](!q & !t))) | (<ended_by>!<before>((p & s) | (p & t)) | [ended_by]!(q | <met_by>!!(q | t))))",
+      "size": 41,
+      "type": "valid"
+    },
+    {
+      "formula": "([begins]![meets]p | <begins>[meets]p)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(![meets]q & !<meets>!q) | (<begins>[meets]q | [begins]<meets>!q))",
+      "size": 18,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begun_by>(<before>!<later>s & !s) | (<begun_by>[before]<meets><meets>s | [begun_by]s))",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "(<ended_by>(s & [before]!q) | (<ended_by>!s | [ended_by]<met_by><met_by>!!q))",
+      "size": 13,
+      "type": "valid"
+    },
+    {
+      "formula": "((<ended_by>!<before>(![met_by]p -> s) & (!<met_by>!p | s)) | !(![ended_by]<met_by><met_by>(!<met_by>!p | s) & (!<met_by>!p | s)))",
+      "size": 36,
+      "type": "valid"
+    },
+    {
+      "formula": "([begins]![before]![meets]r | <begins>[before]<meets>!r)",
+      "size": 15,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets]![begins]![begins]p | <meets>!<begins>!<begins>!p)",
+      "size": 15,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets]![begins]p | <meets>[begins]p)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "!([later](![meets]((!q & !s) & (t | (s & (t | (!![begun_by]r -> !s))))) -> ((!(q | s) & t) | (!(q | s) & ((s & t) | (s & (s -> <begun_by>!r)))))) & ([later]<meets>!((!(q | s) & t) | (!(q | s) & (s & (t | (!![begun_by]r -> !s))))) & <later>(((q | s) | !t) & ((q | s) | (!s | (!t & (!![begun_by]r & s)))))))",
+      "size": 98,
+      "type": "valid"
+    },
+    {
+      "formula": "((!(!(![ended_by]<before>q & !!<ended_by>!<met_by><met_by>q) -> !s) & s) | (!s | (!s | !!<ended_by>!<met_by><met_by>q)))",
+      "size": 32,
+      "type": "valid"
+    },
+    {
+      "formula": "((s | <meets><meets>(!s & !<begun_by>!r)) | (!s & [later]!!(s | ![begun_by]r)))",
+      "size": 24,
+      "type": "valid"
+    },
+    {
+      "formula": "([ended_by]<met_by>!s | <ended_by>[met_by]s)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "!(![meets]![begun_by]<later>!p & [meets]!!<begun_by>!![later]p)",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "(!(!(!s & !<meets><meets>(!s & !(<later>!<begun_by>!r -> ![before]r))) & !<meets><meets>(!!(s | <later>!(s | (!![later]![begun_by]r | <before>!r))) & !<begun_by>!r)) | ((s | <later>!(s | (<later>!<begun_by>!r -> ![before]r))) & [later](!(s | <later>!(s | (<later>!<begun_by>!r -> ![before]r))) | ![begun_by]r)))",
+      "size": 88,
+      "type": "valid"
+    },
+    {
+      "formula": "(<meets>(q & [begun_by]q) | (<meets>!q | [meets]![begun_by]q))",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "(([meets](!!q -> ![begins]![meets]![later]t) | ((!<meets>!(!!q -> ![begins]<meets>!<later>!t) & (!<begins>!![meets]![later]t -> !q)) & (!!q & [begins]![meets]![later]t))) | (!([meets](!!q -> ![begins]![meets]![later]t) | ((!!q -> ![begins]![meets]![later]t) & [meets](!!q -> ![begins]![meets]![later]t))) | (<meets>(!!q & [begins]![meets]![later]t) & (!q | <begins>[meets]![later]t))))",
+      "size": 119,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(q & !<meets><meets>q) | (<begins>!q | [begins]<later>q))",
+      "size": 13,
+      "type": "valid"
+    },
+    {
+      "formula": "([ended_by]<before>q | <ended_by>[met_by][met_by]!q)",
+      "size": 10,
+      "type": "valid"
+    },
+    {
+      "formula": "((!![ended_by]![finished]p | (!<met_by><met_by>![finished]p & ((!![finished]![finished]p -> !q) & [finished]p))) | ((<ended_by>!![finished]p & <before><finished>!p) | (<ended_by>!![finished]p & (![finished]p | (q & [finished]![finished]p)))))",
+      "size": 56,
+      "type": "valid"
+    },
+    {
+      "formula": "(!(![ended_by]p & (<met_by><met_by>p | (q -> p))) | ((<ended_by>!p & <before>p) | (![ended_by]p & (!!p | !q))))",
+      "size": 28,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets]![begins]s | <meets>[begins]!!s)",
+      "size": 13,
+      "type": "valid"
+    },
+    {
+      "formula": "([ended_by][finished]!<met_by>!s | [ended_by]<finished><met_by>!s)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "([begins][begun_by][meets]<later>q | [begins]![begun_by][meets]<meets><meets>q)",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "([begun_by]<meets>!q | ![begun_by]![meets]q)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "(<meets>(!((!q & !![begins]q) & q) & !t) | (<meets>!(!!(q | <begins>!q) | !q) | [meets]t))",
+      "size": 28,
+      "type": "valid"
+    },
+    {
+      "formula": "((![before]<meets><meets>![begun_by]p & [begun_by]p) | (![begun_by]p | [before]<later>![begun_by]p))",
+      "size": 24,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets][meets][meets]([begun_by]<begun_by>!r | 0) | <meets><meets>(<begun_by>[begun_by]r & <begun_by>[begun_by]r))",
+      "size": 23,
+      "type": "valid"
+    },
+    {
+      "formula": "(<finished>(t & [finished](!<met_by>!r | p)) | (<finished>!t | !<finished>[finished](![met_by]r -> p)))",
+      "size": 23,
+      "type": "valid"
+    },
+    {
+      "formula": "([ended_by]<met_by>!![ended_by]s | <ended_by>[met_by]<ended_by>!s)",
+      "size": 15,
+      "type": "valid"
+    },
+    {
+      "formula": "([begun_by][begins][meets]!<meets>q | [begun_by]<begins>![later]!q)",
+      "size": 10,
+      "type": "valid"
+    },
+    {
+      "formula": "(<before>(<meets>!q & (![meets]q & [begun_by]<meets>!q)) | (<before>[meets]q | [before]([meets]q | <begun_by>[meets]q)))",
+      "size": 31,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>((!q | !(r & (s | ![meets]p))) & !r) | (<begins>(q & ((r & s) | (r & <meets>!p))) | [begins]r))",
+      "size": 31,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>((r & 1) & [meets][meets]!r) | !([begins](r & 1) & <begins>[later](!r | 0)))",
+      "size": 16,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begun_by>(<before>!<later><before>!<later>!(r | s) & [before]<meets><meets>(!r & !s)) | (<begun_by>[before]<meets><meets>![before]<meets><meets>(!r & !s) | [begun_by]<before>[meets][meets](r | s)))",
+      "size": 47,
+      "type": "valid"
+    },
+    {
+      "formula": "(<ended_by>(<met_by><met_by>(!!!!(p & p) & (p | t)) & !r) | (<ended_by>[before]((!(p & p) | !(p & p)) & (!(p & p) | !t)) | [ended_by]r))",
+      "size": 41,
+      "type": "valid"
+    },
+    {
+      "formula": "((![meets]<meets><meets>p & <begins>!<meets>!<later>p) | ([meets]<later>p | [begins]<meets>!<later>p))",
+      "size": 27,
+      "type": "valid"
+    },
+    {
+      "formula": "(((!s & !<meets><meets>(!s & !p)) | <meets><meets>(!!(s | <later>!(s | p)) & !<begun_by>!r)) | ((s | <later>!(s | p)) & [later](!(s | <later>!(s | p)) | ![begun_by]r)))",
+      "size": 55,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(![meets]q & !r) | (<begins>!<meets>!q | !<begins>!r))",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "([meets](<begins>!p & ![begins]p) | <meets>[begins]p)",
+      "size": 15,
+      "type": "valid"
+    },
+    {
+      "formula": "((!<ended_by>!<before>(![met_by]p -> s) | !(!<met_by>!p | s)) & (![ended_by]<met_by><met_by>(!<met_by>!p | s) & (!<met_by>!p | s)))",
+      "size": 36,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<begins><begun_by>![meets]<later>q & <begins>[begun_by][meets]<meets><meets>q)",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begun_by](<meets>!<begun_by>!r -> (<meets>!<begun_by>!r & !!![meets]![begun_by]r)) & !([begun_by]<meets>!<begun_by>!r -> [begun_by]!!<meets>!<begun_by>!r))",
+      "size": 36,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](![meets]q -> <meets>!q) & ([begins]<meets>!q & <begins>[meets]q))",
+      "size": 18,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<ended_by><finished><before>(r & 1) & <ended_by>[finished][met_by][met_by]!r)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([ended_by](<met_by><met_by>(!!!!(p & p) & (p | t)) -> r) & ([ended_by]<before>((!!(p & p) & !!(p & p)) | (!!(p & p) & t)) & <ended_by>!r))",
+      "size": 41,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begun_by](<meets>!<begun_by>!(s -> (s -> ((t -> s) -> p))) -> (<meets>!<begun_by>!(s -> (s -> ((t -> s) -> p))) & !!![meets]![begun_by](!(!(!p -> !(!t | s)) -> !s) -> !s))) & !([begun_by]<meets>!<begun_by>!(s -> (s -> ((t -> s) -> p))) -> [begun_by]!!<meets>!<begun_by>!(s -> (s -> ((t -> s) -> p)))))",
+      "size": 83,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!![before]<meets><meets>p & (<before>!<later>p | !((((s & t) | (s & (s -> <begun_by>!r))) -> <later>p) & <later>p))) & ((!(s & (t | (!![begun_by]r -> !s))) | <later>p) & <later>p))",
+      "size": 51,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![before](<meets>!q -> (!![meets]q | ![begun_by]<meets>!q))) -> (([before]<meets>!q -> [before](<meets>!q -> <begun_by>!![meets]q)))",
+      "size": 31,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![ended_by]<before>(q & !!q) & [ended_by]!!<met_by><met_by>!!q)",
+      "size": 16,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<meets>!(<begins>!p & ![begins]p) & [meets]![begins]p)",
+      "size": 15,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([ended_by](s -> <before>q) & ([ended_by]s & <ended_by>[met_by][met_by]!q))",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([ended_by](p -> <before>r) & ([ended_by]p & <ended_by>[met_by][met_by]!r))",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((<ended_by>!p -> ![met_by]r) & (!<met_by>!r & ![ended_by]p))",
+      "size": 17,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins]((r & 1) -> <meets><meets>r) & ([begins](r & 1) & <begins>[later](!r | 0)))",
+      "size": 16,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([finished](t -> <finished>!(!<met_by>!r | p)) & ([finished]t & <finished>[finished](![met_by]r -> p)))",
+      "size": 23,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<meets>!![begins]p & [meets]<begins>!p)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(![begun_by]((<later>p & (r -> q)) | (<later>p & r)) | !(![begun_by](<meets><meets>p & ((!r | q) | r)) | <later>p)) & !(!<begun_by>!(<later>p & ((!r | q) | r)) & !(!<begun_by>!(<later>p & ((!r | q) | r)) & !<later>p)))",
+      "size": 62,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![meets]![begun_by]r & [meets]!!<begun_by>!r)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![meets]![begun_by]s & [meets]!!<begun_by>!s)",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![begun_by]<meets>!q & [begun_by]![meets]q)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<meets><meets><meets><begun_by>!p & [meets][meets][begun_by]p)",
+      "size": 12,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<ended_by><finished><met_by>!s & <ended_by>[finished][met_by]s)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!(!s & !<meets><meets>(!s & !p)) & !<meets><meets>(!!(s | <later>!(s | p)) & !<begun_by>!r)) & (!(s | <later>!(s | p)) | <later>!(!(s | <later>!(s | p)) | ![begun_by]r)))",
+      "size": 55,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![finished]<met_by><met_by>s & [finished]<before>s)",
+      "size": 10,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!(!s & !<meets><meets>(!s & !(s & 1))) & !<meets><meets>(!!(s | <later>!(s | s)) & !<begun_by>!r)) & (!(s | <later>!(s | (s & 1))) | <later>!(!(s | <later>!(s | (s & 1))) | ![begun_by]r)))",
+      "size": 58,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<met_by>!<finished>!r & [met_by]![finished]r)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([later](![meets]((!q & !s) & (t | (s & (t | (!![begun_by]r -> !s))))) -> ((!(q | s) & t) | (!(q | s) & ((s & t) | (s & (s -> <begun_by>!r)))))) & ([later]<meets>!((!(q | s) & t) | (!(q | s) & (s & (t | (!![begun_by]r -> !s))))) & ![later]((!(q | s) & t) | (!(q | s) & (s & (t | (!![begun_by]r -> !s)))))))",
+      "size": 98,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!s & !<meets><meets>(!s & !<begun_by>!r)) & (s | <later>!(s | ![begun_by]r)))",
+      "size": 24,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![begins]![meets]p & [begins]<meets>!p)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<begins><begun_by>![meets]q & <begins>[begun_by][meets]q)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<meets>!![begins]<meets>!![begins]p & [meets]<begins>!!!![meets]<begins>!p)",
+      "size": 21,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((![ended_by]p & (<met_by><met_by>p | t)) & (([ended_by]!!p | [before]!p) & ([ended_by]p | !t)))",
+      "size": 22,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([meets](q -> ![begun_by]q) & ([meets]q & <meets>[begun_by]!!q))",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<meets>!![begins]![begins]p & [meets]<begins>!<begins>!p)",
+      "size": 15,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!![meets]<meets><meets>p | !<begins>!<meets>!<later>p) & (<meets>!<later>p & ![begins]<meets>!<later>p))",
+      "size": 27,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!<ended_by>!<met_by>!s) -> (![ended_by]![met_by]s)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](q -> <meets><meets>q) & ([begins]q & <begins>[later]!q))",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begun_by]((!t & !<meets><meets>(s & 1)) -> r) & ([begun_by]!(t | <later>s) & <begun_by>!r))",
+      "size": 21,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!<meets>!<begun_by>!q) -> (![meets]![begun_by]q)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((![ended_by]p & (<met_by><met_by>p | ((!![finished]p -> !q) -> p))) & (([ended_by]p | [before]!p) & ([ended_by]p | (!p & (q -> <finished>!p)))))",
+      "size": 38,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((s & (![begins]p | <meets>!t)) & ((!s | [begins]p) & (!s | [meets]t)))",
+      "size": 25,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([before](t -> (!t | ![begun_by]<meets>!q)) & ([before]t & <before>(t & [begun_by]![meets]q)))",
+      "size": 23,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((![before]<meets><meets>![begun_by]p -> <begun_by>!p) & (!![begun_by]p & <before>!<later>![begun_by]p))",
+      "size": 24,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((((!r -> !<begun_by>!s) -> ![meets]p) & !<meets>!p) & (![begun_by]s -> r))",
+      "size": 23,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!(!s & !<meets><meets>(!s & !(<later>!<begun_by>!r -> ![before]r))) & !<meets><meets>(!!(s | <later>!(s | (!![later]![begun_by]r | <before>!r))) & !<begun_by>!r)) & (!(s | <later>!(s | (<later>!<begun_by>!r -> ![before]r))) | <later>!(!(s | <later>!(s | (<later>!<begun_by>!r -> ![before]r))) | ![begun_by]r)))",
+      "size": 88,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((<begun_by>!<begins>!(s & s) -> <before>!![meets]p) & (!![before]<meets>!p & ![begun_by]![begins]s))",
+      "size": 27,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<finished><ended_by>![later]<before>q & <finished>[ended_by][later]<met_by><met_by>q)",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([ended_by](<met_by><met_by>(!!s & (s | t)) -> r) & ([ended_by]<before>((s & s) | (s & t)) & <ended_by>!r))",
+      "size": 25,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<meets>!![begins]p & [meets]<begins>!p)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!(!(!<begins>!p & !<met_by>!!(<begins>!p | t)) | !![begun_by]r) | ((!(![begins]p | ![met_by](!<begins>!p & !t)) & <begun_by>!r) & !t)) | ((((<begins>!p | <met_by>!!(<begins>!p | t)) | [begun_by]r) & ((<begins>!p | <met_by>!!(<begins>!p | t)) | [begun_by]r)) | !(((!<begins>!p & !<met_by>!!(<begins>!p | t)) & <begun_by>!r) | !t)))",
+      "size": 105,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begun_by>(s & [met_by]r) | (![begun_by]s | [begun_by]<met_by>!r))",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "([begun_by][begins]!<met_by><met_by>![begins]r | [begun_by]<begins><before><begins>!r)",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begun_by>((q -> p) & [met_by]r) | (<begun_by>(q & !p) | [begun_by]<met_by>!r))",
+      "size": 19,
+      "type": "valid"
+    },
+    {
+      "formula": "([begun_by]![met_by]s | <begun_by>!<met_by>!s)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(![met_by]s & !r) | (<begins>[met_by]s | !<begins>!r))",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "((![begun_by]((![before]<before><met_by>!p & (r -> q)) | (<before>!<met_by><met_by>![met_by]p & r)) | !(![begun_by](<before>!<met_by><met_by>![met_by]p & ((!r | q) | r)) | <before>!<met_by><met_by>![met_by]p)) | ([begun_by](<before>!<met_by><met_by>![met_by]p & ((!r | q) | r)) & (<begun_by>!(<before>!<met_by><met_by>![met_by]p & ((!r | q) | r)) | <before>!<met_by><met_by>![met_by]p)))",
+      "size": 95,
+      "type": "valid"
+    },
+    {
+      "formula": "([begun_by]<met_by><met_by>q | <begun_by>[before]!q)",
+      "size": 10,
+      "type": "valid"
+    },
+    {
+      "formula": "((![begins]p | ![met_by](!<begins>!p & !t)) | ([begins]p & [met_by]!(<begins>!p | t)))",
+      "size": 29,
+      "type": "valid"
+    },
+    {
+      "formula": "([met_by]<before><begins>!p | <met_by>[met_by][met_by][begins]p)",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(![met_by](!p | !![begins]r) & !r) | (<begins>!<met_by>!!(p & <begins>!r) | [begins]r))",
+      "size": 25,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(![met_by](!p | !![begins]!(p & t)) & (p & t)) | (<begins>[met_by]!(p & <begins>!(!p | !t)) | !<begins>(p & t)))",
+      "size": 40,
+      "type": "valid"
+    },
+    {
+      "formula": "!([begins](((((r & ![met_by]p) | (r & p)) & (r & 1)) | (((r & ![met_by]p) | (r & p)) & p)) -> (!(r & (<met_by>!p | p)) -> !r)) & ([begins](((r & ![met_by]p) | (r & p)) & (r | p)) & <begins>(r & ((!r | [met_by]p) & (!r | !p)))))",
+      "size": 65,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begun_by>(![before]![before]<before>r & [before]<met_by><met_by>r) | (<begun_by>[before]<before>!<met_by><met_by>r | [begun_by]<before>[met_by][met_by]!r))",
+      "size": 29,
+      "type": "valid"
+    },
+    {
+      "formula": "((!<met_by>!<begins>!p & p) | (!p | <met_by>[begins]p))",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "(((r -> ![begins]<met_by><met_by>r) | r) | !((!<begins>!<before>r -> !r) | r))",
+      "size": 23,
+      "type": "valid"
+    },
+    {
+      "formula": "((((!<begins>!p & !<met_by>!!(<begins>!p | t)) & q) | ((!(![begins]p | ![met_by](!<begins>!p & !t)) & q) & !t)) | (((!(!<begins>!p & !<met_by>!!(<begins>!p | t)) | !q) & ((<begins>!p | !!<met_by>!!(<begins>!p | t)) | !q)) | (((<begins>!p | !!<met_by>!!(<begins>!p | t)) | !q) & t)))",
+      "size": 95,
+      "type": "valid"
+    },
+    {
+      "formula": "(([met_by]s | ((!<met_by>!s & ![begun_by]s) & !<begun_by>!s)) | ((<met_by>!s & ([begun_by]s | <met_by>!s)) | (<met_by>!s & <begun_by>!s)))",
+      "size": 37,
+      "type": "valid"
+    },
+    {
+      "formula": "!([begins](![met_by](!p | !![begins](!(s | t) & (p | t))) -> (((!s & !t) & p) | ((!s & !t) & t))) & ([begins]<met_by>!!(p & <begins>!(((!s & !t) & p) | ((!s & !t) & t))) & <begins>(((s | t) | !p) & ((s | t) | !t))))",
+      "size": 74,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(![met_by](!p | s) & !r) | (<begins>[met_by](p -> s) | [begins]r))",
+      "size": 19,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(![met_by](!(r & (((r & p) | (r & t)) | (!s & !t))) | !![begins]!((r & (((r & p) | (r & t)) | (!s & !t))) & t)) & (((r & (r & (p | t))) | (r & !(s | t))) & t)) | (<begins>[met_by]!((r & (((r & p) | (r & t)) | (!s & !t))) & <begins>!(!(r & (((r & p) | (r & t)) | (!s & !t))) | !t)) | !<begins>((r & (((r & p) | (r & t)) | (!s & !t))) & t)))",
+      "size": 123,
+      "type": "valid"
+    },
+    {
+      "formula": "!(((!p | !q) & ((!<met_by>!<begun_by>!r -> !p) | t)) & (((p & q) | (p & [met_by]![begun_by]r)) & ((p & q) | !t)))",
+      "size": 37,
+      "type": "valid"
+    },
+    {
+      "formula": "([begins]![met_by]<before>!s | <begins>[met_by]![before]s)",
+      "size": 15,
+      "type": "valid"
+    },
+    {
+      "formula": "([begun_by][begins][met_by][met_by]!r | [begun_by]![begins][before]!r)",
+      "size": 10,
+      "type": "valid"
+    },
+    {
+      "formula": "(<met_by>(p & [begun_by]r) | (<met_by>!p | [met_by]<begun_by>!r))",
+      "size": 14,
+      "type": "valid"
+    },
+    {
+      "formula": "([begun_by]<met_by>!r | <begun_by>[met_by]r)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(<met_by><met_by>!(p | q) & [begins]q) | (<begins>[before](p | q) | [begins]<begins>(!q | !q)))",
+      "size": 26,
+      "type": "valid"
+    },
+    {
+      "formula": "([begun_by][begun_by][met_by]!<met_by>q | ![begun_by][before]!q)",
+      "size": 9,
+      "type": "valid"
+    },
+    {
+      "formula": "([begun_by][begins][met_by]p | [begun_by]<begins><met_by>!p)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "((![begun_by]<before>r | !(![begun_by]<met_by><met_by>r | ![before](!q -> !s))) | ([begun_by]!!<met_by><met_by>r & (<begun_by>!<met_by><met_by>r | <before>!(s -> q))))",
+      "size": 42,
+      "type": "valid"
+    },
+    {
+      "formula": "((!<met_by>!<begun_by>!r & p) | (!p | <met_by>[begun_by]r))",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "([begins]<met_by><met_by>r | <begins>!<before>r)",
+      "size": 10,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(<met_by><met_by>t & !s) | (<begins>[before]!t | [begins]s))",
+      "size": 13,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(![met_by](!p | !![begins]!(p & ((r & (t -> r)) | (r & t)))) & (p & (r & ((!r -> !t) | t)))) | (<begins>[met_by]!(p & <begins>!(!p | !((r & (t -> r)) | (r & t)))) | [begins]!(p & ((r & (t -> r)) | (r & t)))))",
+      "size": 72,
+      "type": "valid"
+    },
+    {
+      "formula": "(((<met_by>!p -> ![begins]<met_by><met_by><met_by>!p) | ![met_by]p) | ((!<begins>!<before><met_by>!p & <met_by>!p) & [met_by]p))",
+      "size": 35,
+      "type": "valid"
+    },
+    {
+      "formula": "(<met_by>(!(r & <begun_by>!r) & !q) | (![met_by](!r | !![begun_by]r) | [met_by]q))",
+      "size": 21,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(<met_by><met_by>t & [begins]p) | !([begins]<before>t & <begins>[begins]p))",
+      "size": 17,
+      "type": "valid"
+    },
+    {
+      "formula": "(!<begins>!![met_by]p | ![begins]<met_by>!p)",
+      "size": 11,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(<begins>!![met_by]<before>!s & (p | r)) | (<begins>[begins]<met_by>!![before]s | [begins](!p & !r)))",
+      "size": 29,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>(((((r & ![met_by]p) | (r & p)) & s) | (((r & ![met_by]p) | (r & p)) & p)) & (!(r & (<met_by>!p | p)) & s)) | (<begins>(((!r | [met_by]p) & (!r | !p)) | (!s & !p)) | [begins](!s | ((r & <met_by>!p) | (r & p)))))",
+      "size": 64,
+      "type": "valid"
+    },
+    {
+      "formula": "(![begun_by](<before>r -> q) | (<begun_by>[met_by][met_by]!r | [begun_by]q))",
+      "size": 13,
+      "type": "valid"
+    },
+    {
+      "formula": "(<met_by>!(p -> ![begun_by](q & !!q)) | (<met_by>!p | !<met_by>[begun_by]q))",
+      "size": 18,
+      "type": "valid"
+    },
+    {
+      "formula": "!([met_by](p -> ![begun_by](q & q)) & ([met_by]p & <met_by>[begun_by]q))",
+      "size": 16,
+      "type": "valid"
+    },
+    {
+      "formula": "(<met_by>(!(r & (<begun_by>!r -> p)) & !q) | !([met_by](!r | !(!p -> !![begun_by]r)) & <met_by>!q))",
+      "size": 27,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begun_by>(s & [met_by](q -> r)) | (<begun_by>!s | [begun_by]<met_by>(!r & q)))",
+      "size": 20,
+      "type": "valid"
+    },
+    {
+      "formula": "([begun_by][begins][met_by][met_by][met_by][met_by]!r | [begun_by]<begins><before><before>r)",
+      "size": 13,
+      "type": "valid"
+    },
+    {
+      "formula": "((!s | ((s & [begun_by]![before]<before><met_by>!p) & (!q & s))) | ((s & (![begun_by]<before>!<met_by><met_by>![met_by]p | !s)) | (s & ((!s | !s) | q))))",
+      "size": 42,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begins>!(<met_by><met_by>t -> ![begins]q) | (<begins>[before]!t | [begins]<begins>(!q | !q)))",
+      "size": 19,
+      "type": "valid"
+    },
+    {
+      "formula": "!([begun_by](s -> <met_by>!![begins]t) & ([begun_by]s & <begun_by>[met_by]<begins>!t))",
+      "size": 18,
+      "type": "valid"
+    },
+    {
+      "formula": "(<met_by>(!(r & (s & (![begins]p | t))) & (r & ((s & <begins>!p) | (s & t)))) | (<met_by>(r & ((s & <begins>!p) | (s & t))) | !<met_by>(r & ((s & <begins>!p) | (s & t)))))",
+      "size": 54,
+      "type": "valid"
+    },
+    {
+      "formula": "(<begun_by><begins><met_by>!p & <begun_by>[begins][met_by]p)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!((<met_by>!p -> ![begins]<met_by><met_by><met_by>!p) | ![met_by]p) & ((!<begins>!<before><met_by>!p -> !<met_by>!p) | <met_by>!p))",
+      "size": 35,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begun_by](![before]![before]<before>r -> <before>!<met_by><met_by>r) & ([begun_by]<before>!<before>!<met_by><met_by>r & ![begun_by]<before>!<met_by><met_by>r))",
+      "size": 29,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<begun_by><begins><met_by><met_by>![begins]r & <begun_by>[begins][before][begins]r)",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begun_by](s -> <met_by>!r) & ([begun_by]s & <begun_by>[met_by]r))",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(<met_by>!p & ((<met_by>!p -> <begun_by>!![before]<before><met_by>!p) | (!q -> !![met_by]p)))) -> (((<met_by>!p & (!![begun_by]<before>!<met_by><met_by>![met_by]p -> !<met_by>!p)) | (<met_by>!p & ((<met_by>!p & <met_by>!p) -> q))))",
+      "size": 58,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](![met_by](!p | !![begins]!(p & t)) -> (!p | !t)) & !([begins]<met_by>!!(p & <begins>!(!p | !t)) -> [begins](!p | !t)))",
+      "size": 40,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([met_by](!(r & (s & (![begins]p | t))) -> (!r | !((s & <begins>!p) | (s & t)))) & ([met_by](!r | !((s & <begins>!p) | (s & t))) & <met_by>(r & ((s & <begins>!p) | (s & t)))))",
+      "size": 54,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(![begins]p | ![met_by](!<begins>!p & !t)) & (<begins>!p | <met_by>!!(<begins>!p | t)))",
+      "size": 29,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begun_by]((q -> p) -> <met_by>!r) & ([begun_by](!q | p) & <begun_by>[met_by]r))",
+      "size": 19,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(s & ((s -> <begun_by>!![before]<before><met_by>!p) | (!q -> !s)))) -> (((s & (!![begun_by]<before>!<met_by><met_by>![met_by]p -> !s)) | (s & ((s & s) -> q))))",
+      "size": 42,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](<met_by><met_by>!(p | q) -> ![begins]q) & ([begins]<before>(!p & !q) & <begins>[begins]!!(q & q)))",
+      "size": 26,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begun_by](s -> <met_by>!![begins]t) & !([begun_by]s -> [begun_by]![met_by]<begins>!t))",
+      "size": 18,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<begins>!![met_by]p & [begins]<met_by>!p)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](((((r & ![met_by]p) | (r & p)) & (r & 1)) | (((r & ![met_by]p) | (r & p)) & p)) -> (!(r & (<met_by>!p | p)) -> !r)) & ([begins](((r & ![met_by]p) | (r & p)) & (r | p)) & <begins>(r & ((!r | [met_by]p) & (!r | !p)))))",
+      "size": 65,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(((!p | !q) & ((!<met_by>!<begun_by>!r -> !p) | t)) & (((p & q) | (p & [met_by]![begun_by]r)) & ((p & q) | !t)))",
+      "size": 37,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((![met_by]s & ((!<met_by>!s -> !![begun_by]s) | <begun_by>!s)) & (!(![met_by]s & (![begun_by]s -> ![met_by]s)) & ([met_by]s | !![begun_by]s)))",
+      "size": 37,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([met_by](p -> ![begun_by]r) & ([met_by]p & <met_by>[begun_by]r))",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!<begun_by>!![met_by]s) -> (![begun_by]<met_by>!s)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](![met_by](!p | !![begins](!(s | t) & (p | t))) -> (((!s & !t) & p) | ((!s & !t) & t))) & ([begins]<met_by>!!(p & <begins>!(((!s & !t) & p) | ((!s & !t) & t))) & <begins>(((s | t) | !p) & ((s | t) | !t))))",
+      "size": 74,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](![met_by](!p | !![begins]!(p & ((r & (t -> r)) | (r & t)))) -> (!p | !(r & ((!r -> !t) | t)))) & ([begins]<met_by>!!(p & <begins>!(!p | !((r & (t -> r)) | (r & t)))) & <begins>(!!p & ((r & (t -> r)) | (r & t)))))",
+      "size": 72,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![met_by]<before><begins>!p & [met_by]<met_by><met_by>![begins]p)",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begun_by](s -> <met_by>!(q -> r)) & ([begun_by]s & <begun_by>[met_by](!r -> !q)))",
+      "size": 20,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([met_by](!(r & (<begun_by>!r -> p)) -> q) & ([met_by](!r | !(!p -> !![begun_by]r)) & <met_by>!q))",
+      "size": 27,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!!(![begun_by]((![before]<before><met_by>!p & (r -> q)) | (<before>!<met_by><met_by>![met_by]p & r)) | !(![begun_by](<before>!<met_by><met_by>![met_by]p & ((!r | q) | r)) | <before>!<met_by><met_by>![met_by]p))) -> ((!<begun_by>!(<before>!<met_by><met_by>![met_by]p & ((!r | q) | r)) & !(!<begun_by>!(<before>!<met_by><met_by>![met_by]p & ((!r | q) | r)) & !<before>!<met_by><met_by>![met_by]p)))",
+      "size": 95,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![begun_by]<met_by><met_by>q & !<begun_by>!<before>q)",
+      "size": 10,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!<begun_by><begun_by><met_by><met_by>q) -> (<begun_by><before>q)",
+      "size": 9,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([met_by](p -> ![begun_by](q & !!q)) & ([met_by]p & <met_by>[begun_by]!!q))",
+      "size": 18,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](![met_by](!p | s) -> r) & ([begins]<met_by>!(p -> s) & <begins>!r))",
+      "size": 19,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(((!(!<begins>!p & !<met_by>!!(<begins>!p | t)) | !![begun_by]r) & ((!!(![begins]p | ![met_by](!<begins>!p & !t)) | !<begun_by>!r) | t)) & ((((!<begins>!p & !<met_by>!!(<begins>!p | t)) & <begun_by>!r) | ((!<begins>!p & !<met_by>!!(<begins>!p | t)) & <begun_by>!r)) & (((!<begins>!p & !<met_by>!!(<begins>!p | t)) & <begun_by>!r) | !t)))",
+      "size": 105,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](((((r & ![met_by]p) | (r & p)) & s) | (((r & ![met_by]p) | (r & p)) & p)) -> (!(r & (<met_by>!p | p)) -> !s)) & ([begins](((r & ![met_by]p) | (r & p)) & (s | p)) & <begins>(s & ((!r | !![met_by]p) & (!r | !p)))))",
+      "size": 64,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](![met_by]s -> r) & !([begins]<met_by>!s -> [begins]r))",
+      "size": 14,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![begins](<met_by><met_by>t -> ![begins]p)) -> (([begins]<before>t -> [begins]<begins>!p))",
+      "size": 17,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([met_by](((t & p) | (t & s)) -> ![begun_by](q & !!q)) & !([met_by](t & (p | s)) -> [met_by]<begun_by>!q))",
+      "size": 28,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<begun_by><begins><met_by><met_by><met_by><met_by>r & <begun_by>[begins][before][before]!r)",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begun_by](<before>r -> q) & ([begun_by]<met_by><met_by>r & <begun_by>!q))",
+      "size": 13,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([met_by](p -> ![begun_by](q & q)) & ([met_by]p & <met_by>[begun_by]q))",
+      "size": 16,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(<begins>!![met_by]<before>!s & [begins]<met_by>!![before]s)",
+      "size": 15,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](<met_by><met_by>t -> ![begins]q) & ([begins]<before>t & <begins>[begins](q & q)))",
+      "size": 19,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](![met_by](!(r & (((r & p) | (r & t)) | (!s & !t))) | !![begins]!((r & (((r & p) | (r & t)) | (!s & !t))) & t)) -> (!((r & (r & (p | t))) | (r & !(s | t))) | !t)) & ([begins]<met_by>!!((r & (((r & p) | (r & t)) | (!s & !t))) & <begins>!(!(r & (((r & p) | (r & t)) | (!s & !t))) | !t)) & <begins>((r & (((r & p) | (r & t)) | (!s & !t))) & t)))",
+      "size": 123,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](![met_by](!p | s) -> <begins>!r) & ([begins]<met_by>!(p -> s) & <begins>[begins]r))",
+      "size": 23,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "((!<met_by>!<begun_by>!r -> !p) & (p & !![met_by]![begun_by]r))",
+      "size": 17,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!(![begun_by]<before>r | !(![begun_by]<met_by><met_by>r | ![before](!q -> !s))) & (<begun_by>!<met_by><met_by>r | (!<begun_by>!<met_by><met_by>r & !<before>!(s -> q))))",
+      "size": 42,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!<begun_by><begins><met_by><met_by>r) -> ([begun_by]<begins><before>r)",
+      "size": 10,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!!((r -> ![begins]<met_by><met_by>r) | r)) -> ((!(!<begins>!<before>r -> !r) & !r))",
+      "size": 23,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(![begun_by]<met_by>!r & [begun_by]![met_by]r)",
+      "size": 11,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(((!(!<begins>!p & !<met_by>!!(<begins>!p | t)) | !q) & ((!!(![begins]p | ![met_by](!<begins>!p & !t)) | !q) | t)) & !((!((!<begins>!p & !<met_by>!!(<begins>!p | t)) & q) & !((!<begins>!p & !<met_by>!!(<begins>!p | t)) & q)) | (!((!<begins>!p & !<met_by>!!(<begins>!p | t)) & q) & t)))",
+      "size": 95,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "(!![begins]<met_by><met_by>r) -> (<begins>!<before>r)",
+      "size": 10,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](<begins>!![met_by]<before>!s -> (!p & !r)) & ([begins]![begins]<met_by>!![before]s & ![begins]!(p | r)))",
+      "size": 29,
+      "type": "unsatisfiable"
+    },
+    {
+      "formula": "([begins](<met_by><met_by>t -> s) & !([begins]<before>t -> [begins]s))",
+      "size": 13,
+      "type": "unsatisfiable"
+    }
+  ]
+}
