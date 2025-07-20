@@ -30,6 +30,12 @@ pip install -r requirements.txt
 4. Move the resuling JSONs to `results/data/`
 5. Plot the overall results with the command `python3 plotter.py results/data`
 6. Plot all the results with the command `python3 src/generate_plots.py -d results/data`
+7. To test the complexity class accuracy:
+    1. Run a benchmark evaluation using `resources/benchmark/complexity_100.json` or generate your own by running `python3 src/benchmark_to_complexity.py resources/benchmark/all.json`
+    2. Plot the result with `python3 src/complexity_plot.py 'result-path-here'`
+
+> [!NOTE]  
+> For the complexity class tests you can use any benchmark JSON, but they will not be balanced.
 
 > [!NOTE]  
 > You may need to install LaTeX and add it to the PATH to correctly generate the plots.
