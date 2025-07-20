@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 4. Move the resuling JSONs to `results/data/`
 5. Plot the overall results with the command `python3 plotter.py results/data`
-6. Plot all the results with the command `python src/generate_plots.py -d results/data`
+6. Plot all the results with the command `python3 src/generate_plots.py -d results/data`
 
 > [!NOTE]  
 > You may need to install LaTeX and add it to the PATH to correctly generate the plots.
