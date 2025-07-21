@@ -2,6 +2,9 @@
 
 This repository contains the code required to generate and evaluate the benchmarks shown in the *Assessing The (In)Ability of LLMs To Reason in Interval Temporal Logic* paper submitted to the 2025 [TIME](https://time2025conf.github.io/) conference.
 
+> [!NOTE]  
+> The code for dataset generation will be added soon
+
 
 ## Setup and run the project
 1. Prepare the working environment:
@@ -27,7 +30,7 @@ pip install -r requirements.txt
 > [!IMPORTANT]  
 > Qwen3 models have a specific feature that allows enabling/disabling the reasoning CoT generation by appending `/think` / `/no_think` to the prompt. For this reason all the non-CoT tests for the Qwen models are commented. You will need to manually add `/no_think` to the prompt for these tests to be correctly executed. Also set `max_tokens_no_cot` to 10.
 
-4. Move the resulting JSONs to `results/data/`
+4. Move the resulting JSONs to `results/data/` (Delete the paper's default data if you don't need them)
 5. Plot the overall results with the command `python3 plotter.py results/data`
 6. Plot all the results with the command `python3 src/generate_plots.py -d results/data`
 7. To test the complexity class accuracy:
